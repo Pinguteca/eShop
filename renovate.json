@@ -48,7 +48,7 @@
       "matchDatasources": [
         "github-tags"
       ],
-      "matchPackagePatterns": [
+      "matchPackageNames": [
         "^dotnet/aspire",
         "^dotnet/"
       ],
