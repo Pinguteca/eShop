@@ -14,7 +14,7 @@
   "dependencyDashboard": true,
   "prConcurrentLimit": 6,
   "prHourlyLimit": 2,
-  "minimumReleaseAge": 24,
+  "minimumReleaseAge": "3 days",
   "internalChecksFilter": "strict",
   "rangeStrategy": "bump",
   "separateMinorPatch": false,
