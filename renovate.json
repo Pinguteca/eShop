@@ -22,7 +22,7 @@
       "separateMajor": true
     },
     {
-      "matchManagers": ["dockerfile", "docker"],
+      "matchManagers": ["dockerfile"],
       "groupName": "Docker image updates",
       "separateMajor": true
     },
@@ -45,7 +45,7 @@
       "groupName": "Microsoft SDKs (manual review)"
     }
   ],
-  "enabledManagers": ["nuget", "dockerfile", "docker", "github-actions"],
+  "enabledManagers": ["nuget", "dockerfile", "github-actions"],
   "prBodyNotes": [
     "If this PR needs manual testing, add the `no-automerge` label or disable automerge in the repo Renovate config."
   ]
