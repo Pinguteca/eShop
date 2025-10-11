@@ -5,8 +5,7 @@
     "mergeConfidence:all-badges"
   ],
   "timezone": "Europe/Madrid",
-  "baseBranches": [
-    "main",
+  "baseBranchPatterns": [
     "develop"
   ],
   "labels": [
@@ -15,18 +14,15 @@
   "dependencyDashboard": true,
   "prConcurrentLimit": 6,
   "prHourlyLimit": 2,
+  "minimumReleaseAge": 24,
+  "internalChecksFilter": "strict",
   "rangeStrategy": "bump",
   "separateMinorPatch": false,
   "schedule": [
     "before 03:00"
   ],
   "forkProcessing": "enabled",
-  "lockFileMaintenance": {
-    "enabled": true,
-    "extends": [
-      "schedule:weekly"
-    ]
-  },
+  "lockFileMaintenance": { "enabled": true },
   "packageRules": [
     {
       "matchManagers": [
