@@ -10,19 +10,40 @@ default_install_hook_types:
 fail_fast: true
 
 repos:
+  ############################################################################
+  #                         COMMIT MESSAGE TOOLS
+  ############################################################################
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v4.9.1
+    hooks:
+      - id: commitizen
+        stages: [commit-msg]
+      - id: commitizen-branch
+        stages: [pre-push]
+  ############################################################################
+  #                         SECRET DETECTION TOOLS
+  ############################################################################
   - repo: https://github.com/gitleaks/gitleaks
     rev: v8.28.0
     hooks:
-      ############################################################################
-      #                         SECRET DETECTION TOOLS
-      ############################################################################
       - id: gitleaks
-        args: ["--staged","--redact", "--no-banner", "--platform", "github", "--verbose"]
         name: Gitleaks secret detection
+        description: Scan for secrets using gitleaks.
+        args: ["--staged","--redact", "--no-banner", "--platform", "github", "--verbose"]
         stages: ["pre-commit"]
-      ############################################################################
-      #                         IMAGE COMPRESSION TOOLS
-      ############################################################################
+  - repo: local
+    hooks:
+      - id: trivy
+        name: Trivy
+        description: Vulnerability and license scan with Trivy
+        language: system
+        entry: trivy
+        args: ["repo", "--scanners", "vuln,license", "--severity", "CRITICAL,HIGH", "--quiet", "--exit-code", "1", "--disable-telemetry", "."]
+        pass_filenames: false
+        stages: ["pre-commit"]      
+  ############################################################################
+  #                         IMAGE COMPRESSION TOOLS
+  ############################################################################
   - repo: https://github.com/oxipng/oxipng
     rev: v9.1.5
     hooks:
@@ -30,4 +51,6 @@ repos:
         name: Oxipng compression
         description: Visually lossless optimization of PNG files.
         args: ["-o", "4", "--strip", "safe", "--alpha"]
+        pass_filenames: true
         types: [png]
+        stages: ["pre-push"]
