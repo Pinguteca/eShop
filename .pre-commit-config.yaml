@@ -20,3 +20,14 @@ repos:
         args: ["--staged","--redact", "--no-banner", "--platform", "github", "--verbose"]
         name: Gitleaks secret detection
         stages: ["pre-commit"]
+      ############################################################################
+      #                         IMAGE COMPRESSION TOOLS
+      ############################################################################
+  - repo: https://github.com/oxipng/oxipng
+    rev: v9.1.5
+    hooks:
+      - id: oxipng
+        name: Oxipng compression
+        description: Visually lossless optimization of PNG files.
+        args: ["-o", "4", "--strip", "safe", "--alpha"]
+        types: [png]
