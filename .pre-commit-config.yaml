@@ -1,0 +1,22 @@
+default_stages:
+  - "pre-commit"
+default_install_hook_types:
+  - "pre-commit"
+  - "commit-msg"
+  - "pre-push"
+  - "post-checkout"
+  - "post-merge"
+
+fail_fast: true
+
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.28.0
+    hooks:
+      ############################################################################
+      #                         SECRET DETECTION TOOLS
+      ############################################################################
+      - id: gitleaks
+        args: ["--staged","--redact", "--no-banner", "--platform", "github", "--verbose"]
+        name: Gitleaks secret detection
+        stages: ["pre-commit"]
