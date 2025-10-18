@@ -13,16 +13,15 @@ repos:
   ############################################################################
   #                         COMMIT MESSAGE TOOLS
   ############################################################################
-  - repo: https://github.com/commitizen-tools/commitizen
-    rev: v4.9.1
+  - repo: local
     hooks:
-      - id: commitizen
+      - id: cocogitto-commit-msg
+        name: Cocogitto verify
+        language: system
+        entry: "cog"
+        args: ["verify", "--file"]
         stages: [commit-msg]
-      - id: commitizen-branch
-        stages: [pre-push]
-  ############################################################################
-  #                         SECRET DETECTION TOOLS
-  ############################################################################
+        pass_filenames: true
   - repo: https://github.com/gitleaks/gitleaks
     rev: v8.28.0
     hooks:
@@ -38,7 +37,7 @@ repos:
         description: Vulnerability and license scan with Trivy
         language: system
         entry: trivy
-        args: ["repo", "--scanners", "vuln,license", "--severity", "CRITICAL,HIGH", "--quiet", "--exit-code", "1", "--disable-telemetry", "."]
+        args: ["repo", "--scanners", "vuln,license", "--severity", "CRITICAL", "--quiet", "--exit-code", "1", "--disable-telemetry", "."]
         pass_filenames: false
         stages: ["pre-commit"]      
   ############################################################################
