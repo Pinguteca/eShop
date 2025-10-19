@@ -3,7 +3,7 @@
 {
     "name": ".NET Aspire",
     // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-    "image": "mcr.microsoft.com/devcontainers/dotnet:9.0-bookworm@sha256:3fb76bc8fdb52ffb081ba16ad87b427851f0da284b2646b0a17f8253a72f7a99",
+    "image": "mcr.microsoft.com/devcontainers/dotnet:dev-10.0-noble@sha256:3920807c7304921773b67d3a76bbff5c5d0f3727bea2f014c29d395c41977a08",
     // From https://containers.dev/features
     "features": {
         "ghcr.io/devcontainers/features/powershell:1": {},
@@ -52,7 +52,8 @@
 
     // Use 'postCreateCommand' to run commands after the container is created.
     // "postCreateCommand": "dotnet restore",
-    "onCreateCommand": "dotnet workload install aspire",
+    // This is somewhat dangerous
+    "onCreateCommand": "curl -sSL https://aspire.dev/install.sh | bash",
     "postStartCommand": "dotnet dev-certs https --trust",
     "customizations": {
         "vscode": {
