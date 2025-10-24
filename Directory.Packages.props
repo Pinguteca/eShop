@@ -4,7 +4,7 @@
     <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
     <AspnetVersion>10.0.0-preview.7.25380.108</AspnetVersion>
     <MicrosoftExtensionsVersion>10.0.0-preview.7.25380.108</MicrosoftExtensionsVersion>
-    <AspireVersion>9.5.0</AspireVersion>
+    <AspireVersion>9.5.2</AspireVersion>
     <AspireUnstablePackagesVersion>9.5.0-preview.1.25474.7</AspireUnstablePackagesVersion>
     <GrpcVersion>2.71.0</GrpcVersion>
     <DuendeVersion>7.3.1</DuendeVersion>
