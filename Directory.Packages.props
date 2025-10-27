@@ -45,7 +45,7 @@
     <PackageVersion Include="Microsoft.AspNetCore.TestHost" Version="10.0.0-rc.1.25451.107" />
     <PackageVersion Include="Microsoft.Extensions.Identity.Stores" Version="10.0.0-rc.1.25451.107" />
     <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="9.9.0" />
-    <PackageVersion Include="Microsoft.OpenApi" Version="2.3.2" />
+    <PackageVersion Include="Microsoft.OpenApi" Version="2.3.8" />
     <PackageVersion Include="MSTest.TestFramework" Version="3.10.4" />
     <PackageVersion Include="MSTest.TestAdapter" Version="3.10.4" />
     <!-- Version together with EF -->
