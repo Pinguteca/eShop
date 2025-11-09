@@ -3,7 +3,8 @@
     "config:best-practices",
     "helpers:pinGitHubActionDigestsToSemver",
     ":semanticCommitScope(deps)",
-    "mergeConfidence:all-badges"
+    "mergeConfidence:all-badges",
+    ":separateMultipleMajorReleases"
   ],
   "baseBranchPatterns": [
     "develop"
@@ -11,7 +12,6 @@
   "labels": [
     "renovate"
   ],
-  "dependencyDashboard": true,
   "prConcurrentLimit": 6,
   "prHourlyLimit": 2,
   "minimumReleaseAge": "3 days",
@@ -88,9 +88,8 @@
       ],
       "groupName": "Microsoft SDKs (Second Tuesday Patch Updates)",
       "automerge": false,
-      "separateMajor": true,
       "schedule": [
-        "0 3-6 8-14 * 3"
+        "* 3-6 8-14 * 3"
       ],
       "labels": [
         "Microsoft-SDKs",
