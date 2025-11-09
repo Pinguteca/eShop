@@ -6,13 +6,11 @@
     "mergeConfidence:all-badges",
     ":separateMultipleMajorReleases",
     ":assignAndReview(Pinguladora)",
-    ":approveMajorUpdates"
+    ":approveMajorUpdates",
+    ":label(renovate)"
   ],
   "baseBranchPatterns": [
     "develop"
-  ],
-  "labels": [
-    "renovate"
   ],
   "prConcurrentLimit": 6,
   "prHourlyLimit": 2,
