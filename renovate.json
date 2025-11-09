@@ -5,7 +5,8 @@
     ":semanticCommitScope(deps)",
     "mergeConfidence:all-badges",
     ":separateMultipleMajorReleases",
-    ":assignAndReview(Pinguladora)"
+    ":assignAndReview(Pinguladora)",
+    ":approveMajorUpdates"
   ],
   "baseBranchPatterns": [
     "develop"
