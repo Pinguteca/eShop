@@ -30,9 +30,20 @@
   "forkProcessing": "enabled",
   "lockFileMaintenance": {
     "enabled": true,
-    "extends": ["schedule:daily"],
+    "extends": [
+      "schedule:daily"
+    ],
     "automerge": true
   },
+  "enabledManagers": [
+    "nuget",
+    "dockerfile",
+    "github-actions",
+    "pre-commit"
+  ],
+  "prBodyNotes": [
+    "If this PR needs manual testing, add the `no-automerge` label or disable automerge in the repo Renovate config."
+  ],
   "packageRules": [
     {
       "matchManagers": [
@@ -107,14 +118,5 @@
       ],
       "prCreation": "not-pending"
     }
-  ],
-  "enabledManagers": [
-    "nuget",
-    "dockerfile",
-    "github-actions",
-    "pre-commit"
-  ],
-  "prBodyNotes": [
-    "If this PR needs manual testing, add the `no-automerge` label or disable automerge in the repo Renovate config."
   ]
 }
