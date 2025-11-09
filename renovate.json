@@ -27,7 +27,9 @@
     "* 0-3 * * *"
   ],
   "forkProcessing": "enabled",
-  "lockFileMaintenance": { "enabled": true },
+  "lockFileMaintenance": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "matchManagers": [
@@ -75,15 +77,24 @@
       "automergeType": "branch"
     },
     {
+      "matchManagers": [
+        "nuget"
+      ],
       "matchPackageNames": [
         "Microsoft.NET.Sdk",
         "Microsoft.AspNetCore.App"
       ],
-      "matchManagers": [
-        "nuget"
-      ],
+      "groupName": "Microsoft SDKs (Second Tuesday Patch Updates)",
       "automerge": false,
-      "groupName": "Microsoft SDKs (manual review)"
+      "separateMajor": true,
+      "schedule": [
+        "0 3-6 8-14 * 3"
+      ],
+      "labels": [
+        "Microsoft-SDKs",
+        "needs-runtime-tests"
+      ],
+      "prCreation": "not-pending"
     }
   ],
   "enabledManagers": [
