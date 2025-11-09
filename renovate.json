@@ -28,7 +28,9 @@
   ],
   "forkProcessing": "enabled",
   "lockFileMaintenance": {
-    "enabled": true
+    "enabled": true,
+    "extends": ["schedule:daily"],
+    "automerge": true
   },
   "packageRules": [
     {
