@@ -8,14 +8,17 @@
     ":assignAndReview(Pinguladora)",
     ":approveMajorUpdates",
     ":label(renovate)",
-    ":enablePreCommit"
+    ":enablePreCommit",
+    ":prNotPending",
+    ":automergeMinor",
+    ":automergeDigest"
   ],
   "baseBranchPatterns": [
     "develop"
   ],
   "prConcurrentLimit": 6,
   "prHourlyLimit": 2,
-  "minimumReleaseAge": "3 days",
+  "minimumReleaseAge": "14 days",
   "internalChecksFilter": "strict",
   "rangeStrategy": "bump",
   "separateMinorPatch": false,
@@ -23,7 +26,6 @@
   "schedule": [
     "* 0-3 * * *"
   ],
-  "automerge": false,
   "automergeSchedule": [
     "* 0-3 * * *"
   ],
@@ -32,17 +34,13 @@
     "enabled": true,
     "extends": [
       "schedule:daily"
-    ],
-    "automerge": true
+    ]
   },
   "enabledManagers": [
     "nuget",
     "dockerfile",
     "github-actions",
     "pre-commit"
-  ],
-  "prBodyNotes": [
-    "If this PR needs manual testing, add the `no-automerge` label or disable automerge in the repo Renovate config."
   ],
   "packageRules": [
     {
@@ -96,7 +94,6 @@
         "**/Dockerfile",
         ".github/workflows/**"
       ],
-      "automerge": true,
       "automergeType": "branch"
     },
     {
@@ -115,8 +112,7 @@
       "labels": [
         "Microsoft-SDKs",
         "needs-runtime-tests"
-      ],
-      "prCreation": "not-pending"
+      ]
     }
   ]
 }
