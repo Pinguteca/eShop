@@ -5,7 +5,6 @@
     ":semanticCommitScope(deps)",
     "mergeConfidence:all-badges"
   ],
-  "timezone": "Europe/Madrid",
   "baseBranchPatterns": [
     "develop"
   ],
@@ -19,8 +18,13 @@
   "internalChecksFilter": "strict",
   "rangeStrategy": "bump",
   "separateMinorPatch": false,
+  "timezone": "Europe/Madrid",
   "schedule": [
-    "before 03:00"
+    "* 0-3 * * *"
+  ],
+  "automerge": false,
+  "automergeSchedule": [
+    "* 0-3 * * *"
   ],
   "forkProcessing": "enabled",
   "lockFileMaintenance": { "enabled": true },
