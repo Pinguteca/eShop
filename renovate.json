@@ -1,29 +1,59 @@
 {
   "extends": [
-    "config:recommended",
+    "config:best-practices",
+    "helpers:pinGitHubActionDigestsToSemver",
     ":semanticCommitScope(deps)",
-    "mergeConfidence:all-badges"
+    "mergeConfidence:all-badges",
+    ":separateMultipleMajorReleases",
+    ":assignAndReview(Pinguladora)",
+    ":approveMajorUpdates",
+    ":label(renovate)",
+    ":enablePreCommit",
+    ":prNotPending",
+    ":automergeMinor",
+    ":automergeDigest",
+    ":timezone(Europe/Madrid)",
+    ":enableVulnerabilityAlertsWithAdditionalLabels(security)"
   ],
-  "timezone": "Europe/Madrid",
   "baseBranchPatterns": [
     "develop"
   ],
-  "labels": [
-    "renovate"
-  ],
-  "dependencyDashboard": true,
   "prConcurrentLimit": 6,
   "prHourlyLimit": 2,
-  "minimumReleaseAge": "3 days",
+  "minimumReleaseAge": "14 days",
   "internalChecksFilter": "strict",
   "rangeStrategy": "bump",
   "separateMinorPatch": false,
   "schedule": [
-    "before 03:00"
+    "* 0-3 * * *"
+  ],
+  "automergeSchedule": [
+    "* 0-3 * * *"
   ],
   "forkProcessing": "enabled",
-  "lockFileMaintenance": { "enabled": true },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "extends": [
+      "schedule:daily"
+    ]
+  },
+  "enabledManagers": [
+    "nuget",
+    "dockerfile",
+    "devcontainer",
+    "github-actions",
+    "pre-commit"
+  ],
   "packageRules": [
+    {
+      "matchManagers": [
+        "pre-commit"
+      ],
+      "groupName": "Pre-commit updates",
+      "labels": [
+        "pre-commit"
+      ]
+    },
     {
       "matchManagers": [
         "nuget"
@@ -66,27 +96,29 @@
         "**/Dockerfile",
         ".github/workflows/**"
       ],
-      "automerge": true,
       "automergeType": "branch"
     },
     {
+      "matchManagers": [
+        "nuget"
+      ],
       "matchPackageNames": [
         "Microsoft.NET.Sdk",
         "Microsoft.AspNetCore.App"
       ],
-      "matchManagers": [
-        "nuget"
-      ],
+      "groupName": "Microsoft SDKs (Second Tuesday Patch Updates)",
       "automerge": false,
-      "groupName": "Microsoft SDKs (manual review)"
+      "schedule": [
+        "* 3-6 8-14 * 3"
+      ],
+      "minimumReleaseAge": "0 days",
+      "labels": [
+        "Microsoft-SDKs",
+        "needs-runtime-tests"
+      ],
+      "prBodyNotes": [
+        "⚠️ These updates may require additional runtime testing to ensure compatibility."
+      ]
     }
-  ],
-  "enabledManagers": [
-    "nuget",
-    "dockerfile",
-    "github-actions"
-  ],
-  "prBodyNotes": [
-    "If this PR needs manual testing, add the `no-automerge` label or disable automerge in the repo Renovate config."
   ]
 }
