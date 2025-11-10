@@ -109,9 +109,13 @@
       "schedule": [
         "* 3-6 8-14 * 3"
       ],
+      "minimumReleaseAge": "0 days",
       "labels": [
         "Microsoft-SDKs",
         "needs-runtime-tests"
+      ],
+      "prBodyNotes": [
+        "⚠️ These updates may require additional runtime testing to ensure compatibility."
       ]
     }
   ]
