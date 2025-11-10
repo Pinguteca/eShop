@@ -11,7 +11,8 @@
     ":enablePreCommit",
     ":prNotPending",
     ":automergeMinor",
-    ":automergeDigest"
+    ":automergeDigest",
+    ":timezone(Europe/Madrid)"
   ],
   "baseBranchPatterns": [
     "develop"
@@ -22,7 +23,6 @@
   "internalChecksFilter": "strict",
   "rangeStrategy": "bump",
   "separateMinorPatch": false,
-  "timezone": "Europe/Madrid",
   "schedule": [
     "* 0-3 * * *"
   ],
