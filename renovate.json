@@ -12,7 +12,8 @@
     ":prNotPending",
     ":automergeMinor",
     ":automergeDigest",
-    ":timezone(Europe/Madrid)"
+    ":timezone(Europe/Madrid)",
+    ":enableVulnerabilityAlertsWithAdditionalLabels(security)"
   ],
   "baseBranchPatterns": [
     "develop"
