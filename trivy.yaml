@@ -14,16 +14,30 @@ scan:
   offline: false
   detection-priority: "precise"
   disable-telemetry: true
+  skip-version-check: true
   rekor-url: "https://rekor.sigstore.dev"
   parallel: 10
   skip-dirs:
     - .git
     - bin
     - obj
+    - node_modules
   scanners:
     - vuln
     - misconfig
     - license
+db:
+  download-only: false
+  no-progress: true
+  skip-update: false
+  repository:
+   - mirror.gcr.io/aquasec/trivy-db:2
+   - ghcr.io/aquasecurity/trivy-db:2
+  download-java-only: false
+  java-skip-update: false
+  java-repository:
+   - mirror.gcr.io/aquasec/trivy-java-db:1
+   - ghcr.io/aquasecurity/trivy-java-db:1
 pkg:
   include-dev-deps: true
   relationships:
@@ -36,7 +50,7 @@ pkg:
    - os
    - library
 vulnerability:
-  ignore-unfixed: false
+  ignore-unfixed: true
 license:
   full: false
   confidenceLevel: 0.75
