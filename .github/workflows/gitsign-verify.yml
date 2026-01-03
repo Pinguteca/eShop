@@ -14,8 +14,11 @@ concurrency:
 permissions: {}
 
 jobs:
-  verify:
+  gitSignVerify:
+    if: ${{ github.actor != 'renovate[bot]' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+
     name: Verify commit
     steps:
       - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
