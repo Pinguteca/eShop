@@ -357,9 +357,9 @@
       },
       "Microsoft.NET.ILLink.Tasks": {
         "type": "Direct",
-        "requested": "[10.0.0-rc.1.25451.107, )",
-        "resolved": "10.0.0-rc.1.25451.107",
-        "contentHash": "MnPx3NJT7pLBfOgIVs1/IXL8n5sEErhaJu14TQujaXTMwzv9I3v+nzPqUrUuEunaHeeH10n/3oZBn/Xg4trP0g=="
+        "requested": "[10.0.1, )",
+        "resolved": "10.0.1",
+        "contentHash": "ISahzLHsHY7vrwqr2p1YWZ+gsxoBRtH7gWRDK8fDUst9pp2He0GiesaqEfeX0V8QMCJM3eNEHGGpnIcPjFo2NQ=="
       },
       "CommunityToolkit.Maui.Core": {
         "type": "Transitive",
@@ -1545,7 +1545,7 @@
     "net10.0-android36.0/iossimulator-x64": {},
     "net10.0-android36.0/maccatalyst-x64": {},
     "net10.0-android36.0/win-x64": {},
-    "net10.0-ios18.5": {
+    "net10.0-ios26.1": {
       "CommunityToolkit.Maui": {
         "type": "Direct",
         "requested": "[9.1.1, )",
@@ -1646,9 +1646,9 @@
       },
       "Microsoft.NET.ILLink.Tasks": {
         "type": "Direct",
-        "requested": "[10.0.0-rc.1.25451.107, )",
-        "resolved": "10.0.0-rc.1.25451.107",
-        "contentHash": "MnPx3NJT7pLBfOgIVs1/IXL8n5sEErhaJu14TQujaXTMwzv9I3v+nzPqUrUuEunaHeeH10n/3oZBn/Xg4trP0g=="
+        "requested": "[10.0.1, )",
+        "resolved": "10.0.1",
+        "contentHash": "ISahzLHsHY7vrwqr2p1YWZ+gsxoBRtH7gWRDK8fDUst9pp2He0GiesaqEfeX0V8QMCJM3eNEHGGpnIcPjFo2NQ=="
       },
       "CommunityToolkit.Maui.Core": {
         "type": "Transitive",
@@ -1802,11 +1802,11 @@
         "contentHash": "rJtkoRYWmkBPVxpvrWYvACYfrCqW98ilio6M5wUqu8X7AzcxVp1R17b5XLgFUyJKkmolyqibO06C6wOV3kOOig=="
       }
     },
-    "net10.0-ios18.5/android-arm64": {},
-    "net10.0-ios18.5/iossimulator-x64": {},
-    "net10.0-ios18.5/maccatalyst-x64": {},
-    "net10.0-ios18.5/win-x64": {},
-    "net10.0-maccatalyst18.5": {
+    "net10.0-ios26.1/android-arm64": {},
+    "net10.0-ios26.1/iossimulator-x64": {},
+    "net10.0-ios26.1/maccatalyst-x64": {},
+    "net10.0-ios26.1/win-x64": {},
+    "net10.0-maccatalyst26.1": {
       "CommunityToolkit.Maui": {
         "type": "Direct",
         "requested": "[9.1.1, )",
@@ -1907,9 +1907,9 @@
       },
       "Microsoft.NET.ILLink.Tasks": {
         "type": "Direct",
-        "requested": "[10.0.0-rc.1.25451.107, )",
-        "resolved": "10.0.0-rc.1.25451.107",
-        "contentHash": "MnPx3NJT7pLBfOgIVs1/IXL8n5sEErhaJu14TQujaXTMwzv9I3v+nzPqUrUuEunaHeeH10n/3oZBn/Xg4trP0g=="
+        "requested": "[10.0.1, )",
+        "resolved": "10.0.1",
+        "contentHash": "ISahzLHsHY7vrwqr2p1YWZ+gsxoBRtH7gWRDK8fDUst9pp2He0GiesaqEfeX0V8QMCJM3eNEHGGpnIcPjFo2NQ=="
       },
       "CommunityToolkit.Maui.Core": {
         "type": "Transitive",
@@ -2063,10 +2063,10 @@
         "contentHash": "rJtkoRYWmkBPVxpvrWYvACYfrCqW98ilio6M5wUqu8X7AzcxVp1R17b5XLgFUyJKkmolyqibO06C6wOV3kOOig=="
       }
     },
-    "net10.0-maccatalyst18.5/android-arm64": {},
-    "net10.0-maccatalyst18.5/iossimulator-x64": {},
-    "net10.0-maccatalyst18.5/maccatalyst-x64": {},
-    "net10.0-maccatalyst18.5/win-x64": {},
+    "net10.0-maccatalyst26.1/android-arm64": {},
+    "net10.0-maccatalyst26.1/iossimulator-x64": {},
+    "net10.0-maccatalyst26.1/maccatalyst-x64": {},
+    "net10.0-maccatalyst26.1/win-x64": {},
     "net10.0-windows10.0.19041": {
       "CommunityToolkit.Maui": {
         "type": "Direct",
