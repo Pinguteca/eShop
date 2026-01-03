@@ -1,16 +1,24 @@
-name: Verify Commit
+name: GitSign commit verification
 description: This action verifies the PR commit using Gitsign.
-on: [pull_request]
+on:
+  push:
+    branches: "**"
+  pull_request:
+    branches: "**"
+
 
 concurrency:
-  group: gitsign-verify
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 
 permissions: {}
 
 jobs:
-  verify:
+  gitSignVerify:
+    if: ${{ github.actor != 'renovate[bot]' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+
     name: Verify commit
     steps:
       - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
