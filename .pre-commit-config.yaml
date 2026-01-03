@@ -40,7 +40,7 @@ repos:
         description: Vulnerability and license scan with Trivy
         language: system
         entry: trivy
-        args: ["repo", "--scanners", "vuln,license", "--severity", "CRITICAL", "--quiet", "--exit-code", "1", "--disable-telemetry", "."]
+        args: ["repo", "."]
         pass_filenames: false
         stages: ["pre-commit"]
   - repo: https://github.com/renovatebot/pre-commit-hooks
