@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: Setup .NET (global.json)
-        uses: actions/setup-dotnet@v5
+        uses: actions/setup-dotnet@2016bd2012dba4e32de620c46fe006a3ac9f0602 # v5.0.1
 
       - name: Update Workloads
         run: dotnet workload update
