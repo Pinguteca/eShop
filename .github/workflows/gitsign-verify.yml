@@ -26,7 +26,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           persist-credentials: false
-      - uses: chainguard-dev/actions/setup-gitsign@0cda751b114eb55c388e88f7479292668165602a # v1.0.2
+      - uses: chainguard-dev/actions/setup-gitsign@3e8a2a226fad9e1ecbf2d359b8a7697554a4ac6d # v1.5.10
       - shell: bash
         run: |
           gitsign verify --certificate-identity-regexp="^.*@gmail.com$" --certificate-oidc-issuer="https://github.com/login/oauth"
