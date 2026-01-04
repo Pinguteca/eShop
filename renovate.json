@@ -13,13 +13,17 @@
     ":automergeMinor",
     ":automergeDigest",
     ":timezone(Europe/Madrid)",
-    ":enableVulnerabilityAlertsWithAdditionalLabel(security)"
+    ":enableVulnerabilityAlertsWithAdditionalLabel(security)",
+    ":rebaseStalePrs",
+    ":pinSkipCi",
+    ":prConcurrentLimit10",
+    ":prHourlyLimitNone"
+
   ],
   "baseBranchPatterns": [
     "develop"
   ],
-  "prConcurrentLimit": 6,
-  "prHourlyLimit": 2,
+  "draftPR": true,
   "minimumReleaseAge": "14 days",
   "internalChecksFilter": "strict",
   "rangeStrategy": "bump",
