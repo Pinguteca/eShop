@@ -53,7 +53,7 @@ repos:
   #                         IMAGE COMPRESSION TOOLS
   ############################################################################
   - repo: https://github.com/oxipng/oxipng
-    rev: v9.1.5
+    rev: v10.0.0
     hooks:
       - id: oxipng
         name: Oxipng compression
