@@ -1,0 +1,50 @@
+name: Deploy Zensical site to GitHub Pages
+on:
+  push:
+    branches: [master, main, develop]
+    paths:
+    - "docs/zensical/**"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deployToGitHubPages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            docs/zensical/**.md
+          sparse-checkout-cone-mode: false
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+      - run: pip install zensical
+      - run: zensical build --clean
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site/zensical
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
