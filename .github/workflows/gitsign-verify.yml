@@ -1,16 +1,25 @@
-name: Verify Commit
+name: GitSign commit verification
 description: This action verifies the PR commit using Gitsign.
-on: [pull_request]
+on:
+  # Skip verification for Mend Renovate bot commits
+  push:
+    branches: 
+      - "*!renovate/**"
+  pull_request:
+    branches:
+      - "*!renovate/**"
 
 concurrency:
-  group: gitsign-verify
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 
 permissions: {}
 
 jobs:
-  verify:
+  gitSignVerify:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+
     name: Verify commit
     steps:
       - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
