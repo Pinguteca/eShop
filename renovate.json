@@ -15,15 +15,15 @@
     ":timezone(Europe/Madrid)",
     ":enableVulnerabilityAlertsWithAdditionalLabel(security)",
     ":rebaseStalePrs",
-    ":pinSkipCi"
+    ":pinSkipCi",
+    ":prConcurrentLimit10",
+    ":prHourlyLimitNone"
 
   ],
   "baseBranchPatterns": [
     "develop"
   ],
   "draftPR": true,
-  "prConcurrentLimit": 6,
-  "prHourlyLimit": 2,
   "minimumReleaseAge": "14 days",
   "internalChecksFilter": "strict",
   "rangeStrategy": "bump",
