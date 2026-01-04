@@ -1,11 +1,13 @@
 name: GitSign commit verification
 description: This action verifies the PR commit using Gitsign.
 on:
+  # Skip verification for Mend Renovate bot commits
   push:
-    branches: "**"
+    branches: 
+      - "*!renovate/**"
   pull_request:
-    branches: "**"
-
+    branches:
+      - "*!renovate/**"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -15,7 +17,6 @@ permissions: {}
 
 jobs:
   gitSignVerify:
-    if: ${{ github.actor != 'renovate[bot]' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
