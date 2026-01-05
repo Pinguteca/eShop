@@ -1,11 +1,17 @@
 name: Deploy Zensical site to GitHub Pages
 on:
   push:
-    branches: [master, main, develop]
+    branches: [master, main, develop, feature/#90-add-zensical]
     paths:
-    - "docs/zensical/**"
-    - zensical.toml
+      - "docs/zensical/**"
+      - zensical.toml
+      - ".github/workflows/zensical-site.yml"
   workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target environment'
+        required: true
+        default: github-pages
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
