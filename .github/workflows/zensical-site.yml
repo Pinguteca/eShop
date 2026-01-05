@@ -4,6 +4,7 @@ on:
     branches: [master, main, develop]
     paths:
     - "docs/zensical/**"
+    - zensical.toml
   workflow_dispatch:
 
 concurrency:
@@ -31,6 +32,7 @@ jobs:
         with:
           persist-credentials: false
           sparse-checkout: |
+            zensical.toml
             docs/zensical/**.md
           sparse-checkout-cone-mode: false
       - name: Setup Pages
