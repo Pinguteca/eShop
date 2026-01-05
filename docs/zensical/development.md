@@ -8,8 +8,6 @@ tags:
 robots: noindex, nofollow
 ---
 
-# Get started
-
 This page documents common developer workflows and useful commands to work on eShop.
 
 ## Prerequisites

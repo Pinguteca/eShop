@@ -1,20 +1,31 @@
 name: Markdownlint
+on:
+  pull_request:
+    branches: [master, main, develop]
+    paths:
+      - "**/*.md"
+      - "!docs/zensical/**.md"
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# Ref: https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/controlling-permissions-for-github_token
 permissions:
   contents: read
 
-# run even on changes without markdown changes, so that we can
-# make it in GitHub a required check for PR's
-on:
-  pull_request:
-
 jobs:
-  lint:
-
+  lintMardown:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
     - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      with:
+        persist-credentials: false
+        sparse-checkout: |
+          "**/*.md"
+        sparse-checkout-cone-mode: false
     - name: Use Node.js
       uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
       with:
