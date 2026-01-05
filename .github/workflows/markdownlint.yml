@@ -1,6 +1,7 @@
 name: Markdownlint
 on:
   pull_request:
+    types: [reopened, ready_for_review, review_requested]
     branches: [master, main, develop]
     paths:
       - "**/*.md"
