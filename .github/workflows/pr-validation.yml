@@ -36,9 +36,9 @@ jobs:
           sparse-checkout: | # Avoid checking out MAUI and ClientApp files
             !**.md
             !src/ClientApp/**
-            tests/ClientApp.UnitTests/**
-            .github/workflows/pr-validation-maui.yml
+            !tests/ClientApp.UnitTests/**
           sparse-checkout-cone-mode: false
+          filter: 'blob:none'
       - name: Setup .NET (global.json)
         uses: actions/setup-dotnet@2016bd2012dba4e32de620c46fe006a3ac9f0602 # v5.0.1
       - name: Build 
