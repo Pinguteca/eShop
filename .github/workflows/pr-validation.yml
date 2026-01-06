@@ -28,6 +28,12 @@ jobs:
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           persist-credentials: false
+          sparse-checkout: | # Avoid checking out MAUI and ClientApp files
+            !**.md
+            !src/ClientApp/**
+            tests/ClientApp.UnitTests/**
+            .github/workflows/pr-validation-maui.yml
+          sparse-checkout-cone-mode: false
       - name: Setup .NET (global.json)
         uses: actions/setup-dotnet@2016bd2012dba4e32de620c46fe006a3ac9f0602 # v5.0.1
       - name: Build 
