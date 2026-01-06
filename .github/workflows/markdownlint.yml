@@ -21,6 +21,11 @@ jobs:
     timeout-minutes: 15
 
     steps:
+    - name: Optimize Git config for CI
+      run: |
+        # Disable compression for faster network transfer.
+        git config --global core.compression 0 
+        git config --global core.fsyncObjectFiles false
     - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
       with:
         persist-credentials: false
