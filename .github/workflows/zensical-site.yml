@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'Target environment'
+        description: "Target environment"
         required: true
         default: github-pages
 
@@ -24,7 +24,7 @@ jobs:
   deployToGitHubPages:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    
+
     permissions:
       pages: write
       id-token: write
@@ -47,7 +47,7 @@ jobs:
             zensical.toml
             docs/zensical/**
           sparse-checkout-cone-mode: false
-          filter: 'blob:none'
+          filter: "blob:none"
       - name: Setup Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
       - name: Setup Python

@@ -4,18 +4,18 @@ on:
   pull_request:
     types: [reopened, ready_for_review, review_requested]
     paths-ignore:
-      - '**.md'
-      - 'src/ClientApp/**'
-      - 'tests/ClientApp.UnitTests/**'
-      - '.github/workflows/pr-validation-maui.yml'
+      - "**.md"
+      - "src/ClientApp/**"
+      - "tests/ClientApp.UnitTests/**"
+      - ".github/workflows/pr-validation-maui.yml"
   push:
     branches:
       - main
     paths-ignore:
-      - '**.md'
-      - 'src/ClientApp/**'
-      - 'tests/ClientApp.UnitTests/**'
-      - '.github/workflows/pr-validation-maui.yml'
+      - "**.md"
+      - "src/ClientApp/**"
+      - "tests/ClientApp.UnitTests/**"
+      - ".github/workflows/pr-validation-maui.yml"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -25,7 +25,7 @@ concurrency:
 permissions:
   contents: read
 
-jobs:  
+jobs:
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -44,10 +44,10 @@ jobs:
             !src/ClientApp/**
             !tests/ClientApp.UnitTests/**
           sparse-checkout-cone-mode: false
-          filter: 'blob:none'
+          filter: "blob:none"
       - name: Setup .NET (global.json)
         uses: actions/setup-dotnet@2016bd2012dba4e32de620c46fe006a3ac9f0602 # v5.0.1
-      - name: Build 
+      - name: Build
         run: dotnet build eShop.Web.slnf
       - name: Test
         run: dotnet test --solution eShop.Web.slnf --no-build --no-progress --output detailed

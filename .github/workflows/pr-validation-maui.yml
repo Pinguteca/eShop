@@ -4,18 +4,18 @@ on:
   pull_request:
     types: [reopened, ready_for_review, review_requested]
     branches:
-      - '**'
+      - "**"
     paths:
-      - 'src/ClientApp/**'
-      - 'tests/ClientApp.UnitTests/**'
-      - '.github/workflows/pr-validation-maui.yml'
+      - "src/ClientApp/**"
+      - "tests/ClientApp.UnitTests/**"
+      - ".github/workflows/pr-validation-maui.yml"
   push:
     branches:
       - main
     paths:
-      - 'src/ClientApp/**'
-      - 'tests/ClientApp.UnitTests/**'
-      - '.github/workflows/pr-validation-maui.yml'
+      - "src/ClientApp/**"
+      - "tests/ClientApp.UnitTests/**"
+      - ".github/workflows/pr-validation-maui.yml"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -25,10 +25,10 @@ concurrency:
 permissions:
   contents: read
 
-jobs:  
+jobs:
   test:
     runs-on: windows-latest
-    timeout-minutes: 30    
+    timeout-minutes: 30
     steps:
       - name: Optimize Git config for CI
         run: |
@@ -39,7 +39,7 @@ jobs:
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           persist-credentials: false
-          filter: 'blob:none'
+          filter: "blob:none"
       - name: Setup .NET (global.json)
         uses: actions/setup-dotnet@2016bd2012dba4e32de620c46fe006a3ac9f0602 # v5.0.1
 
@@ -54,8 +54,8 @@ jobs:
           dotnet workload install maccatalyst
           dotnet workload install maui
 
-      - name: Build 
+      - name: Build
         run: dotnet build src/ClientApp/ClientApp.csproj
-        
+
       - name: Test
         run: dotnet test --project tests/ClientApp.UnitTests/ClientApp.UnitTests.csproj --no-progress --output detailed
