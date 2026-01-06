@@ -6,6 +6,7 @@ on:
     branches: 
       - "*!renovate/**"
   pull_request:
+    types: [reopened, ready_for_review, review_requested]
     branches:
       - "*!renovate/**"
 

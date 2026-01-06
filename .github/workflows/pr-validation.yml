@@ -2,6 +2,7 @@ name: eShop Pull Request Validation
 
 on:
   pull_request:
+    types: [reopened, ready_for_review, review_requested]
     paths-ignore:
       - '**.md'
       - 'src/ClientApp/**'
