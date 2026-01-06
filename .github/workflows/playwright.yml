@@ -15,6 +15,11 @@ on:
       - 'src/ClientApp/**'
       - 'test/ClientApp.UnitTests/**'
       - '.github/workflows/pr-validation-maui.yml'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+  
 jobs:
   test:
     timeout-minutes: 60
