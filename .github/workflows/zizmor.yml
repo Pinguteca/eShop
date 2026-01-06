@@ -17,6 +17,7 @@ jobs:
   zizmor:
     name: Run zizmor 🌈
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       security-events: write # write permission to create security alerts
       # contents: read # only needed for private repos
