@@ -1,4 +1,4 @@
-name: GitHub Actions Security Analysis with zizmor 🌈
+name: GitHub Actions Security Analysis with zizmor
 
 on:
   push:
@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   zizmor:
-    name: Run zizmor 🌈
+    name: Analyze with zizmor
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
@@ -35,6 +35,10 @@ jobs:
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           persist-credentials: false
+          sparse-checkout: |
+            .github/workflows
+            .github/zizmor.yml
+          sparse-checkout-cone-mode: false
 
-      - name: Run zizmor 🌈
+      - name: Run zizmor
         uses: zizmorcore/zizmor-action@e639db99335bc9038abc0e066dfcd72e23d26fb4 # v0.3.0
