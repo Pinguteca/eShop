@@ -3,9 +3,17 @@ name: GitHub Actions Security Analysis with zizmor 🌈
 on:
   push:
     branches: ["main"]
+    paths:
+      - ".github/zizmor.yml"
+      - ".github/workflows/**.yml"
+      - ".github/workflows/**.yaml"
   pull_request:
     types: [reopened, ready_for_review, review_requested]
     branches: ["**"]
+    paths:
+      - ".github/zizmor.yml"
+      - ".github/workflows/**.yml"
+      - ".github/workflows/**.yaml"
 
 permissions: {}
 
