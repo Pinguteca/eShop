@@ -2,28 +2,57 @@ name: eShop Pull Request Validation
 
 on:
   pull_request:
+    types: [reopened, ready_for_review, review_requested]
+    branches:
+      - "**"
     paths-ignore:
-      - '**.md'
-      - 'src/ClientApp/**'
-      - 'tests/ClientApp.UnitTests/**'
-      - '.github/workflows/pr-validation-maui.yml'
+      - "**.md"
+      - "src/ClientApp/**"
+      - "tests/ClientApp.UnitTests/**"
+      - ".github/workflows/pr-validation-maui.yml"
   push:
     branches:
       - main
     paths-ignore:
-      - '**.md'
-      - 'src/ClientApp/**'
-      - 'tests/ClientApp.UnitTests/**'
-      - '.github/workflows/pr-validation-maui.yml'
+      - "**.md"
+      - "src/ClientApp/**"
+      - "tests/ClientApp.UnitTests/**"
+      - ".github/workflows/pr-validation-maui.yml"
 
-jobs:  
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# Ref: https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/controlling-permissions-for-github_token
+permissions:
+  contents: read
+
+jobs:
   test:
-    runs-on: ubuntu-latest    
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
+      - name: Optimize Git config for CI
+        run: |
+          # Disable compression for faster network transfer.
+          git config --global core.compression 0 
+          # Turn off fsync
+          git config --global core.fsync -all
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: | # Avoid checking out MAUI and ClientApp files
+            /*                     
+            /src/**                
+            /tests/**              
+            !**.md
+            !src/ClientApp/**
+            !tests/ClientApp.UnitTests/**
+          sparse-checkout-cone-mode: false
+          filter: "blob:none"
       - name: Setup .NET (global.json)
         uses: actions/setup-dotnet@2016bd2012dba4e32de620c46fe006a3ac9f0602 # v5.0.1
-      - name: Build 
+      - name: Build
         run: dotnet build eShop.Web.slnf
       - name: Test
         run: dotnet test --solution eShop.Web.slnf --no-build --no-progress --output detailed

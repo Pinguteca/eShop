@@ -1,11 +1,11 @@
 name: GitSign commit verification
-description: This action verifies the PR commit using Gitsign.
 on:
   # Skip verification for Mend Renovate bot commits
   push:
     branches: 
       - "*!renovate/**"
   pull_request:
+    types: [reopened, ready_for_review, review_requested]
     branches:
       - "*!renovate/**"
 
@@ -22,10 +22,17 @@ jobs:
 
     name: Verify commit
     steps:
+      - name: Optimize Git config for CI
+        run: |
+          # Disable compression for faster network transfer.
+          git config --global core.compression 0 
+          # Turn off fsync
+          git config --global core.fsync -all
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           persist-credentials: false
+          filter: "blob:none"
       - uses: chainguard-dev/actions/setup-gitsign@3e8a2a226fad9e1ecbf2d359b8a7697554a4ac6d # v1.5.10
       - shell: bash
         run: |

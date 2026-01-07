@@ -1,0 +1,7 @@
+excludes:
+  # Not really needed anymore according
+  # https://github.com/actions/checkout/issues/485
+  # https://github.com/orgs/community/discussions/179107
+  - policy_name: checkout_persist_credentials_should_be_false
+    workflow_file_path: .github/workflows/img-optimization.yaml
+    job_name: caliebreImgOptimization
