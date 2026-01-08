@@ -12,6 +12,7 @@ on:
   push:
     branches:
       - main
+      - feature/#114-add-harden-runner
     paths:
       - "src/ClientApp/**"
       - "tests/ClientApp.UnitTests/**"
