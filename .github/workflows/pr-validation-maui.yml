@@ -2,27 +2,46 @@ name: eShop Pull Request Validation - .NET MAUI
 
 on:
   pull_request:
+    types: [reopened, ready_for_review, review_requested]
     branches:
-      - '**'
+      - "**"
     paths:
-      - 'src/ClientApp/**'
-      - 'tests/ClientApp.UnitTests/**'
-      - '.github/workflows/pr-validation-maui.yml'
+      - "src/ClientApp/**"
+      - "tests/ClientApp.UnitTests/**"
+      - ".github/workflows/pr-validation-maui.yml"
   push:
     branches:
       - main
     paths:
-      - 'src/ClientApp/**'
-      - 'tests/ClientApp.UnitTests/**'
-      - '.github/workflows/pr-validation-maui.yml'
+      - "src/ClientApp/**"
+      - "tests/ClientApp.UnitTests/**"
+      - ".github/workflows/pr-validation-maui.yml"
 
-jobs:  
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# Ref: https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/controlling-permissions-for-github_token
+permissions:
+  contents: read
+
+jobs:
   test:
-    runs-on: windows-latest    
+    runs-on: windows-latest
+    timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v5
+      - name: Optimize Git config for CI
+        run: |
+          # Disable compression for faster network transfer.
+          git config --global core.compression 0 
+          # Turn off fsync
+          git config --global core.fsync -all
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+          filter: "blob:none"
       - name: Setup .NET (global.json)
-        uses: actions/setup-dotnet@v5
+        uses: actions/setup-dotnet@2016bd2012dba4e32de620c46fe006a3ac9f0602 # v5.0.1
 
       - name: Update Workloads
         run: dotnet workload update
@@ -35,8 +54,8 @@ jobs:
           dotnet workload install maccatalyst
           dotnet workload install maui
 
-      - name: Build 
+      - name: Build
         run: dotnet build src/ClientApp/ClientApp.csproj
-        
+
       - name: Test
         run: dotnet test --project tests/ClientApp.UnitTests/ClientApp.UnitTests.csproj --no-progress --output detailed
