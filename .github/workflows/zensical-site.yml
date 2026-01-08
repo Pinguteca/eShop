@@ -3,7 +3,7 @@ on:
   push:
     branches: [master, main, develop]
     paths:
-      - "docs/zensical/**"
+      - "docs/**"
       - zensical.toml
       - ".github/workflows/zensical-site.yml"
   workflow_dispatch:
@@ -45,7 +45,7 @@ jobs:
           persist-credentials: false
           sparse-checkout: |
             zensical.toml
-            docs/zensical/**
+            docs/**
           sparse-checkout-cone-mode: false
           filter: "blob:none"
       - name: Setup Pages
