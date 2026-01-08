@@ -66,7 +66,7 @@ repo_url = "https://github.com/Pinguteca/eShop"
 # Read more: https://zensical.org/docs/customization/#additional-css
 #
 # add a lightweight stylesheet to tweak layout and cards
-extra_css = ["assets/css/custom.css"]
+extra_css = ["stylesheets/custom.css"]
 
 # With the `extra_javascript` option you can add your own JavaScript to your
 # project to customize the behavior according to your needs.
@@ -93,7 +93,7 @@ extra_css = ["assets/css/custom.css"]
 # Read more:
 # - https://zensical.org/docs/customization/#extending-the-theme
 #
-#custom_dir = "overrides"
+custom_dir = "docs/overrides"
 
 # With the "favicon" option you can set your own image to use as the icon
 # browsers will use in the browser title bar or tab bar. The path provided
@@ -339,3 +339,8 @@ actions = [
 [project.extra.consent.cookies]
 github.name = "GitHub, Inc."
 checked = false
+
+[project.extra.analytics]
+provider = "rybbit-analytics"
+site_id = "3e7a78733448"
+data_debounce = 800
