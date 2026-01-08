@@ -66,7 +66,7 @@ repo_url = "https://github.com/Pinguteca/eShop"
 # Read more: https://zensical.org/docs/customization/#additional-css
 #
 # add a lightweight stylesheet to tweak layout and cards
-extra_css = ["assets/css/custom.css"]
+extra_css = ["stylesheets/custom.css"]
 
 # With the `extra_javascript` option you can add your own JavaScript to your
 # project to customize the behavior according to your needs.
