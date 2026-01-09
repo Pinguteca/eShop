@@ -17,7 +17,7 @@ on:
       - "**.webp"
       - "**.avif"
   push:
-    branches: [master, main, develop]
+    branches: [master, main, develop, feature/**]
     paths:
       - "**.jpg"
       - "**.jpeg"
@@ -47,6 +47,12 @@ jobs:
     # Only run on main repo on and PRs that match the main repo.
     if: github.event.pull_request.head.repo.full_name == github.repository
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@20cf305ff2072d973412fa9b1e3a4f227bda3c76 # v2.14.0
+        with:
+          egress-policy: audit
+          disable-telemetry: "true"
+          disable-sudo: "true" # runs on container so same issue as zizmor
       - name: Optimize Git config for CI
         run: |
           # Disable compression for faster network transfer.
