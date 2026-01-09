@@ -1,7 +1,7 @@
 name: Lint GitHub Actions
 on:
   push:
-    branches: [master, main]
+    branches: [master, main, develop, feature/**]
     paths:
       - ".github/zizmor.yml"
       - ".github/workflows/**.yml"
@@ -30,6 +30,13 @@ jobs:
       # contents: read # only needed for private repos
       # actions: read # only needed for private repos
     steps:
+      - uses: cycodelabs/cimon-action@1c3e30d508634b3f4a60b02843126c9f93944d80 # v0.9.4
+        with:
+            prevent: false
+            report-process-tree: true
+            apply-fs-events: true
+            report-pr-summary: true
+            fail-on-error: true
       - name: Optimize Git config for CI
         run: |
           # Disable compression for faster network transfer.
