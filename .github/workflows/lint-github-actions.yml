@@ -35,6 +35,7 @@ jobs:
         with:
           egress-policy: audit
           disable-telemetry: "true"
+          disable-sudo: "true"
           # disable-sudo-and-containers: "true" breaks zizmor
       - name: Optimize Git config for CI
         run: |
