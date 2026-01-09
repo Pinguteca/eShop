@@ -23,7 +23,7 @@ concurrency:
 jobs:
   zizmor:
     name: Analyze actions
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     timeout-minutes: 30
     permissions:
       security-events: write # write permission to create security alerts with Zizmor
@@ -35,7 +35,6 @@ jobs:
             prevent: false
             report-process-tree: true
             apply-fs-events: true
-            report-pr-summary: true
             fail-on-error: true
       - name: Optimize Git config for CI
         run: |
