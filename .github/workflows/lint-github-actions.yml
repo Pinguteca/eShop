@@ -1,7 +1,7 @@
 name: Lint GitHub Actions
 on:
   push:
-    branches: [master, main]
+    branches: [master, main, feature/**]
     paths:
       - ".github/zizmor.yml"
       - ".github/workflows/**.yml"
