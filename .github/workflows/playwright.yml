@@ -1,7 +1,7 @@
 name: Playwright Tests for eShop
 on:
   push:
-    branches: [main, feature/**]
+    branches: [main]
     paths-ignore:
       - "**.md"
       - "src/ClientApp/**"
@@ -9,7 +9,7 @@ on:
       - ".github/workflows/pr-validation-maui.yml"
   pull_request:
     types: [reopened, ready_for_review, review_requested]
-    branches: [main]
+    branches: [main, develop]
     paths-ignore:
       - "**.md"
       - "src/ClientApp/**"

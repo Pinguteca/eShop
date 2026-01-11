@@ -17,7 +17,7 @@ on:
       - "**.webp"
       - "**.avif"
   push:
-    branches: [master, main, develop, feature/**]
+    branches: [master, main, develop]
     paths:
       - "**.jpg"
       - "**.jpeg"

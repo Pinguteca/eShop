@@ -1,7 +1,7 @@
 name: Deploy Zensical site to GitHub Pages
 on:
   push:
-    branches: [master, main, develop, feature/**]
+    branches: [master, main, develop]
     paths:
       - "docs/**"
       - zensical.toml
