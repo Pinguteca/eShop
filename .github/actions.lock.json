@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "generated": "2026-01-11T21:02:15.616Z",
+  "actions": {
+    "step-security/harden-runner": [
+      {
+        "version": "20cf305ff2072d973412fa9b1e3a4f227bda3c76",
+        "sha": "20cf305ff2072d973412fa9b1e3a4f227bda3c76",
+        "integrity": "sha256-54e3ce64c59b87e7a86181a337594f644abee0991c9db3a6887ae738eb7ac970",
+        "dependencies": []
+      }
+    ],
+    "actions/checkout": [
+      {
+        "version": "8e8c483db84b4bee98b60c0593521ed34d9990e8",
+        "sha": "8e8c483db84b4bee98b60c0593521ed34d9990e8",
+        "integrity": "sha256-d414ece895ebce08c818601c45ca8489806731838f8eed6356031b3d1877a7a1",
+        "dependencies": []
+      }
+    ],
+    "chainguard-dev/actions/setup-gitsign": [
+      {
+        "version": "3e8a2a226fad9e1ecbf2d359b8a7697554a4ac6d",
+        "sha": "3e8a2a226fad9e1ecbf2d359b8a7697554a4ac6d",
+        "integrity": "sha256-696e56578f4dd56549ae896605cf415b78f3432bb0cbd42890a48975f84d3503",
+        "dependencies": []
+      }
+    ],
+    "calibreapp/image-actions": [
+      {
+        "version": "f32575787d333b0579f0b7d506ff03be63a669d1",
+        "sha": "f32575787d333b0579f0b7d506ff03be63a669d1",
+        "integrity": "sha256-83683d8e64413847b74787f4f58e7be5bd11fc683f20216afeebf348e9828147",
+        "dependencies": []
+      }
+    ],
+    "github/codeql-action/upload-sarif": [
+      {
+        "version": "0499de31b99561a6d14a36a5f662c2a54f91beee",
+        "sha": "0499de31b99561a6d14a36a5f662c2a54f91beee",
+        "integrity": "sha256-232ab3b73f93e3021fbe3677d4d253b3c3b6d30129ce0838bd84a71c5b76a66d",
+        "dependencies": []
+      }
+    ],
+    "zizmorcore/zizmor-action": [
+      {
+        "version": "e639db99335bc9038abc0e066dfcd72e23d26fb4",
+        "sha": "e639db99335bc9038abc0e066dfcd72e23d26fb4",
+        "integrity": "sha256-33e20e089ff048b85f1cd93cd43f76c73c93a302e40e26c3e5fe48bc3450126a",
+        "dependencies": [
+          {
+            "ref": "github/codeql-action/upload-sarif@0499de31b99561a6d14a36a5f662c2a54f91beee",
+            "sha": "0499de31b99561a6d14a36a5f662c2a54f91beee",
+            "integrity": "sha256-232ab3b73f93e3021fbe3677d4d253b3c3b6d30129ce0838bd84a71c5b76a66d"
+          }
+        ]
+      }
+    ],
+    "reviewdog/action-actionlint": [
+      {
+        "version": "83e4ed25b168066ad8f62f5afbb29ebd8641d982",
+        "sha": "83e4ed25b168066ad8f62f5afbb29ebd8641d982",
+        "integrity": "sha256-233829f7def5d13bcff5b0a4897e08451918874f7709d0184791fcffe55c0e4b",
+        "dependencies": []
+      }
+    ],
+    "actions/setup-node": [
+      {
+        "version": "395ad3262231945c25e8478fd5baf05154b1d79f",
+        "sha": "395ad3262231945c25e8478fd5baf05154b1d79f",
+        "integrity": "sha256-1a5a752048e0de0f754f1c3ca6b923503899bf080b3d08f81fca277de87b3794",
+        "dependencies": []
+      }
+    ],
+    "actions/setup-dotnet": [
+      {
+        "version": "2016bd2012dba4e32de620c46fe006a3ac9f0602",
+        "sha": "2016bd2012dba4e32de620c46fe006a3ac9f0602",
+        "integrity": "sha256-9eef16d9984c63b6f5072277d051842f2cebfe9252c7289a68a860c8158b6675",
+        "dependencies": []
+      }
+    ],
+    "actions/upload-artifact": [
+      {
+        "version": "b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+        "sha": "b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+        "integrity": "sha256-e0f34f5d0067ed363845c1fe618bf73306b466016b6d3e24b99a9536923fe0da",
+        "dependencies": []
+      },
+      {
+        "version": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "sha": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "integrity": "sha256-d5ee64a6e1acd6b34ba789dbae72b073637349d9ac9fb6fe07d5cbcd40768eae",
+        "dependencies": []
+      }
+    ],
+    "gjtorikian/gh-actions-lockfile": [
+      {
+        "version": "24be31e941fc36df78f82762cd45c28b4cbcaedd",
+        "sha": "24be31e941fc36df78f82762cd45c28b4cbcaedd",
+        "integrity": "sha256-6a3612083812bfbf22ef48e284a93dbf82766dea50126f85d2160ae092018087",
+        "dependencies": []
+      }
+    ],
+    "stefanzweifel/git-auto-commit-action": [
+      {
+        "version": "04702edda442b2e678b25b537cec683a1493fcb9",
+        "sha": "04702edda442b2e678b25b537cec683a1493fcb9",
+        "integrity": "sha256-fb727ccb3f59ccc9d4fc5e0de90e1238ad8b9ff2f48e4b100e47ed99c229c509",
+        "dependencies": []
+      }
+    ],
+    "actions/configure-pages": [
+      {
+        "version": "983d7736d9b0ae728b81ab479565c72886d7745b",
+        "sha": "983d7736d9b0ae728b81ab479565c72886d7745b",
+        "integrity": "sha256-9116718f87b423953ee6824c552444b4ad83228c3c9ae28b60284b1951043bf5",
+        "dependencies": []
+      }
+    ],
+    "actions/setup-python": [
+      {
+        "version": "83679a892e2d95755f2dac6acb0bfd1e9ac5d548",
+        "sha": "83679a892e2d95755f2dac6acb0bfd1e9ac5d548",
+        "integrity": "sha256-b161f44a41455db64b8ae0957c99ee94f18d294bfb5a771201bc91e5722bf6c9",
+        "dependencies": []
+      }
+    ],
+    "actions/upload-pages-artifact": [
+      {
+        "version": "7b1f4a764d45c48632c6b24a0339c27f5614fb0b",
+        "sha": "7b1f4a764d45c48632c6b24a0339c27f5614fb0b",
+        "integrity": "sha256-11916470d50964dac182a875ce035408877333335d3b7d0e47e7fcf6459362ce",
+        "dependencies": [
+          {
+            "ref": "actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "sha": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "integrity": "sha256-d5ee64a6e1acd6b34ba789dbae72b073637349d9ac9fb6fe07d5cbcd40768eae"
+          }
+        ]
+      }
+    ],
+    "actions/deploy-pages": [
+      {
+        "version": "d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e",
+        "sha": "d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e",
+        "integrity": "sha256-7546e9bc806674aba44b5f2bd026eadea16acd49b3cddda6b0228691e70964a7",
+        "dependencies": []
+      }
+    ]
+  }
+}
