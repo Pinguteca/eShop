@@ -1,6 +1,7 @@
 name: Verify GitHub Actions integrity
 on:
   pull_request:
+  pull_request_target:
   workflow_dispatch:
 
 permissions: {}
@@ -15,6 +16,8 @@ jobs:
     timeout-minutes: 30
     permissions:
       pull-requests: write # write permission to comment back to PR in case of verify job failure
+    # Only run on main repo on and PRs that match the main repo.
+    if: github.event.pull_request.head.repo.full_name == github.repository
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@20cf305ff2072d973412fa9b1e3a4f227bda3c76 # v2.14.0
@@ -38,7 +41,7 @@ jobs:
       - uses: gjtorikian/gh-actions-lockfile@24be31e941fc36df78f82762cd45c28b4cbcaedd # v1.2.0
         with:
           mode: verify
-          coment: true
+          comment: true
           workflows: ".github/workflows"
           output: ".github/actions.lock.json"
 
