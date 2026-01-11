@@ -29,6 +29,13 @@ jobs:
           git config --global core.compression 0 
           # Turn off fsync
           git config --global core.fsync -all
+      - name: Dump GitHub env/context
+        run: |
+          echo "GITHUB_REPOSITORY=${GITHUB_REPOSITORY:-<unset>}"
+          echo "GITHUB_EVENT_NAME=${GITHUB_EVENT_NAME:-<unset>}"
+          echo "GITHUB_REF=${GITHUB_REF:-<unset>}"
+          echo "GITHUB_SHA=${GITHUB_SHA:-<unset>}"
+          echo "GITHUB_WORKFLOW=${GITHUB_WORKFLOW:-<unset>}"
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           ref: ${{ github.head_ref || github.ref_name }} # checkout the PR branch or the default branch
