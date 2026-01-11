@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
+      contents: read # read permission to checkout code
       pull-requests: write # write permission to comment back to PR in case of verify job failure
     steps:
       - name: Harden Runner
