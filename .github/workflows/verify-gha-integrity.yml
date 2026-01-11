@@ -37,6 +37,7 @@ jobs:
         with:
           mode: verify
           comment: false
+          skip-advisories: true # NOT recommended but otherwise it would force too much rebasing on PRs due to harden-runner setup
           workflows: ".github/workflows"
           output: ".github/actions.lock.json"
 
