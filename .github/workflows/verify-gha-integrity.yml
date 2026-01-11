@@ -13,8 +13,6 @@ jobs:
   verify-actions:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    env:
-      GITHUB_REPOSITORY: ${{ github.repository }}
     permissions:
       pull-requests: write # write permission to comment back to PR in case of verify job failure
     steps:
@@ -32,7 +30,7 @@ jobs:
           git config --global core.fsync -all
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
-          ref: ${{ github.head_ref }} # checkout the PR branch so commits land on the PR
+          ref: ${{ github.head_ref || github.ref_name }} # checkout the PR branch or the default branch
           persist-credentials: false
           sparse-checkout: |
             .github
@@ -40,6 +38,7 @@ jobs:
       - uses: gjtorikian/gh-actions-lockfile@24be31e941fc36df78f82762cd45c28b4cbcaedd # v1.2.0
         with:
           mode: verify
+          token: ${{ secrets.GITHUB_TOKEN }}
           comment: true
           workflows: ".github/workflows"
           output: ".github/actions.lock.json"
@@ -74,6 +73,7 @@ jobs:
       - uses: gjtorikian/gh-actions-lockfile@24be31e941fc36df78f82762cd45c28b4cbcaedd # v1.2.0
         with:
           mode: generate
+          token: ${{ secrets.GITHUB_TOKEN }}
           require-sha: true
           workflows: ".github/workflows"
           output: ".github/actions.lock.json"
