@@ -5,3 +5,6 @@ excludes:
   - policy_name: checkout_persist_credentials_should_be_false
     workflow_file_path: .github/workflows/img-optimization.yaml
     job_name: caliebreImgOptimization
+  - policy_name: checkout_persist_credentials_should_be_false
+    workflow_file_path: .github/workflows/verify-gha-integrity.yml
+    job_name: update-lockfile
