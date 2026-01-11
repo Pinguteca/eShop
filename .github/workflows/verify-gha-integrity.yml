@@ -13,9 +13,6 @@ jobs:
   verify-actions:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    permissions:
-      contents: read # read permission to checkout code
-      pull-requests: write # write permission to comment back to PR in case of verify job failure
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@20cf305ff2072d973412fa9b1e3a4f227bda3c76 # v2.14.0
@@ -29,13 +26,6 @@ jobs:
           git config --global core.compression 0 
           # Turn off fsync
           git config --global core.fsync -all
-      - name: Dump GitHub env/context
-        run: |
-          echo "GITHUB_REPOSITORY=${GITHUB_REPOSITORY:-<unset>}"
-          echo "GITHUB_EVENT_NAME=${GITHUB_EVENT_NAME:-<unset>}"
-          echo "GITHUB_REF=${GITHUB_REF:-<unset>}"
-          echo "GITHUB_SHA=${GITHUB_SHA:-<unset>}"
-          echo "GITHUB_WORKFLOW=${GITHUB_WORKFLOW:-<unset>}"
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           ref: ${{ github.head_ref || github.ref_name }} # checkout the PR branch or the default branch
@@ -44,12 +34,9 @@ jobs:
             .github
           filter: "blob:none"
       - uses: gjtorikian/gh-actions-lockfile@24be31e941fc36df78f82762cd45c28b4cbcaedd # v1.2.0
-        env:
-          GITHUB_REPOSITORY: ${{ github.event.pull_request.base.repo.full_name }}
         with:
           mode: verify
-          token: ${{ secrets.GITHUB_TOKEN }}
-          comment: true
+          comment: false
           workflows: ".github/workflows"
           output: ".github/actions.lock.json"
 
@@ -83,7 +70,6 @@ jobs:
       - uses: gjtorikian/gh-actions-lockfile@24be31e941fc36df78f82762cd45c28b4cbcaedd # v1.2.0
         with:
           mode: generate
-          token: ${{ secrets.GITHUB_TOKEN }}
           require-sha: true
           workflows: ".github/workflows"
           output: ".github/actions.lock.json"
