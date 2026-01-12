@@ -19,18 +19,18 @@
       },
       "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
         "type": "Direct",
-        "requested": "[10.0.0, )",
-        "resolved": "10.0.0",
-        "contentHash": "6ATONu+5A2oh/vzmoFhf3cuQcclMaWGHrb1kvjVsYtml+gzuWD48MmbsItM4xAUQkJZ2t8XFmbGp8pZLPxKneA==",
+        "requested": "[10.0.1, )",
+        "resolved": "10.0.1",
+        "contentHash": "dUm1l7EvSBn3pUHphy+OSKBzZvhwkFCq12YAh8OJBM6/tFpo3HHoOGiOwEwC9ljJOyK+QwwdQJZuqwDXwK2WlQ==",
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.0.1"
         }
       },
       "Microsoft.AspNetCore.Components.QuickGrid": {
         "type": "Direct",
-        "requested": "[10.0.0, )",
-        "resolved": "10.0.0",
-        "contentHash": "auZSKtJ3nyhEk+zIC28fIL7oA1nDGce9ZhUKy75jp1lP66JykcD1wv1PnMzigsd6BMROhhnfoLxMDDCUTz3eKA=="
+        "requested": "[10.0.1, )",
+        "resolved": "10.0.1",
+        "contentHash": "p7+IZRNQgJg72k5uEVdceDUNbtt3j49G7PTp9lkIv2ALY6/kdzYWgp5IKBo1Vfogto4I6b6Gcz4rq4teI/YePA=="
       },
       "Asp.Versioning.Abstractions": {
         "type": "Transitive",
@@ -208,8 +208,8 @@
         "type": "Project",
         "dependencies": {
           "Asp.Versioning.Mvc.ApiExplorer": "[8.1.0, )",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "[10.0.0, )",
-          "Microsoft.AspNetCore.OpenApi": "[10.0.0, )",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "[10.0.1, )",
+          "Microsoft.AspNetCore.OpenApi": "[10.0.1, )",
           "Microsoft.Extensions.Http.Resilience": "[10.0.0, )",
           "Microsoft.Extensions.ServiceDiscovery": "[10.0.0, )",
           "Microsoft.OpenApi": "[2.3.2, )",
@@ -242,18 +242,18 @@
       },
       "Microsoft.AspNetCore.Authentication.JwtBearer": {
         "type": "CentralTransitive",
-        "requested": "[10.0.0, )",
-        "resolved": "10.0.0",
-        "contentHash": "0BgDfT1GoZnzjJOBwx5vFMK5JtqsTEas9pCEwd1/KKxNUAqFmreN60WeUoF+CsmSd9tOQuqWedvdBo/QqHuNTQ==",
+        "requested": "[10.0.1, )",
+        "resolved": "10.0.1",
+        "contentHash": "lvyUEBVv7V1/UvGxfOV3a0kyaQatPAU+ZHru7xha6WVOpa+7aJtKehbiu9VpAt/G50FR+hUwL4nTY33ijsCXwA==",
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.0.1"
         }
       },
       "Microsoft.AspNetCore.OpenApi": {
         "type": "CentralTransitive",
-        "requested": "[10.0.0, )",
-        "resolved": "10.0.0",
-        "contentHash": "0aqIF1t+sA2T62LIeMtXGSiaV7keGQaJnvwwmu+htQdjCaKYARfXAeqp4nHH9y2etpilyZ/tnQzZg4Ilmo/c4Q==",
+        "requested": "[10.0.1, )",
+        "resolved": "10.0.1",
+        "contentHash": "gMY53EggRIFawhue66GanHcm1Tcd0+QzzMwnMl60LrEoJhGgzA9qAbLx6t/ON3hX4flc2NcEbTK1Z5GCLYHcwA==",
         "dependencies": {
           "Microsoft.OpenApi": "2.0.0"
         }
