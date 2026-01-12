@@ -43,12 +43,12 @@
       },
       "CommunityToolkit.Aspire.OllamaSharp": {
         "type": "Direct",
-        "requested": "[9.8.0-beta.395, )",
-        "resolved": "9.8.0-beta.395",
-        "contentHash": "jjdZz9u9OK9yhbxZqFTzQvp8RKr4Wd7eP9n3iQbe0eH8E1QkMkBFJSpkEIocOR/kdEuUW7P2u1swh5axHWSXqg==",
+        "requested": "[13.0.0, )",
+        "resolved": "13.0.0",
+        "contentHash": "uXA8bW+p3uIiGxMeT3PH7ElpRVLisSR3Fk8EOig2M/8xk4N2qwcdtzZIALDb/bKXCMHgnjU6DdNgsSWcrnuNIA==",
         "dependencies": {
-          "Microsoft.Extensions.AI": "9.5.0",
-          "OllamaSharp": "5.1.12",
+          "Microsoft.Extensions.AI": "9.9.0",
+          "OllamaSharp": "5.4.6",
           "OpenTelemetry.Extensions.Hosting": "1.12.0"
         }
       },
@@ -154,8 +154,8 @@
       },
       "Microsoft.Bcl.AsyncInterfaces": {
         "type": "Transitive",
-        "resolved": "9.0.0",
-        "contentHash": "owmu2Cr3IQ8yQiBleBHlGk8dSQ12oaF2e7TpzwJKEl4m84kkZJjEY1n33L67Y3zM5jPOjmmbdHjbfiL0RqcMRQ=="
+        "resolved": "8.0.0",
+        "contentHash": "3WA9q9yVqJp222P3x1wYIGDAkpjAku0TMUaaQV22g6L67AI0LdOIrVS7Ht2vJfLHGSPVuqN94vIr15qn+HEkHw=="
       },
       "Microsoft.Build": {
         "type": "Transitive",
@@ -528,11 +528,10 @@
       },
       "OllamaSharp": {
         "type": "Transitive",
-        "resolved": "5.1.12",
-        "contentHash": "r5uhsPYH1jfot36dr3lqpY3visSNNgsPa8p4crh/DMoWeiY0LBrJlTVoVCZXbjU6J6kzSoW8wzMumPEYqgn4gw==",
+        "resolved": "5.4.6",
+        "contentHash": "00DqtXFMSBlH/vyVXdkuzAnwcTK9at/t3UAEeYMSnyBChmos7LA5ucRNICCMcukTU53olU2uRNL3ka3Mt63Riw==",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "9.0.0",
-          "Microsoft.Extensions.AI.Abstractions": "9.4.0-preview.1.25207.5"
+          "Microsoft.Extensions.AI.Abstractions": "9.9.0"
         }
       },
       "OpenAI": {
