@@ -12,11 +12,11 @@
           "Microsoft.Extensions.Http": "8.0.0"
         }
       },
-      "Aspire.Dashboard.Sdk.win-x64": {
+      "Aspire.Dashboard.Sdk.linux-x64": {
         "type": "Direct",
         "requested": "[13.0.0, )",
         "resolved": "13.0.0",
-        "contentHash": "eJPOJBv1rMhJoKllqWzqnO18uSYNY0Ja7u5D25XrHE9XSI2w5OGgFWJLs4gru7F/OeAdE26v8radfCQ3RVlakg=="
+        "contentHash": "BkeIEarHw5Wbr/GjTW6XEKNY6vvWsE9LzPpz3ljxvc/tTYfmslXllRm2L+h0qaEBHZ8rbKRkkhsqdXgfYeYmTA=="
       },
       "Aspire.Hosting.AppHost": {
         "type": "Direct",
@@ -50,11 +50,11 @@
           "System.IO.Hashing": "9.0.10"
         }
       },
-      "Aspire.Hosting.Orchestration.win-x64": {
+      "Aspire.Hosting.Orchestration.linux-x64": {
         "type": "Direct",
         "requested": "[13.0.0, )",
         "resolved": "13.0.0",
-        "contentHash": "nWzmMDjYJhgT7LwNmDx1Ri4qNQT15wbcujW3CuyvBW/e0y20tyLUZG0/4N81Wzp53VjPFHetAGSNCS8jXQGy9Q=="
+        "contentHash": "1/cHvfaRFiM4Gof+3GCQEFSeAD8mYmxl7KB2U4xuGtm+DzY5JaH+ce9XPr7YUXDi91NOYJTHfm8ZL8L77bZfKQ=="
       },
       "Aspire.Hosting.PostgreSQL": {
         "type": "Direct",
@@ -1198,7 +1198,7 @@
           "EventBusRabbitMQ": "[1.0.0, )",
           "IntegrationEventLogEF": "[1.0.0, )",
           "Pgvector": "[0.3.2, )",
-          "Pgvector.EntityFrameworkCore": "[0.2.2, )",
+          "Pgvector.EntityFrameworkCore": "[0.3.0, )",
           "eShop.ServiceDefaults": "[1.0.0, )"
         }
       },
@@ -1536,12 +1536,12 @@
       },
       "Pgvector.EntityFrameworkCore": {
         "type": "CentralTransitive",
-        "requested": "[0.2.2, )",
-        "resolved": "0.2.2",
-        "contentHash": "U4C48O+f31y7lWlUY+fsZrOZAvzI8rCsQb/sEWF3MfGYX/153uQingO2/8YoXeLGx00Wl9na8zl89gehXtMbFg==",
+        "requested": "[0.3.0, )",
+        "resolved": "0.3.0",
+        "contentHash": "HVMcglKLOg979w67k8DOvKO+xJvfBHv/GcAgv/fI8alK8zp9oIYJUYP9BSV6n6+3GwkfynAJ77euwow4/c7HoA==",
         "dependencies": {
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.0",
-          "Pgvector": "0.3.1"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.1",
+          "Pgvector": "0.3.2"
         }
       },
       "Scalar.AspNetCore": {
