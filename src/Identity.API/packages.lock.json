@@ -17,21 +17,21 @@
       },
       "Duende.IdentityServer": {
         "type": "Direct",
-        "requested": "[7.3.2, )",
-        "resolved": "7.3.2",
-        "contentHash": "qgSFs9po9fUoCLS0mtMX3UEX43UjOZUyn1y8iGhldra6KNSwOEJj8/SuRKctNYVQZiC+IbM7KHjYm/x7sFJfww==",
+        "requested": "[7.4.4, )",
+        "resolved": "7.4.4",
+        "contentHash": "zEqb8lTDhcWuXcfC+yK6xmAGE9VeVbWW8HKDc8vegCM4ldmSwMOwt2nImyh0oIIRklQrUtVeihEjsvju0SBgsw==",
         "dependencies": {
-          "Duende.IdentityServer.Storage": "7.3.2",
-          "Microsoft.AspNetCore.Authentication.OpenIdConnect": "9.0.3"
+          "Duende.IdentityServer.Storage": "7.4.4",
+          "Microsoft.AspNetCore.Authentication.OpenIdConnect": "10.0.0"
         }
       },
       "Duende.IdentityServer.AspNetIdentity": {
         "type": "Direct",
-        "requested": "[7.3.2, )",
-        "resolved": "7.3.2",
-        "contentHash": "/zEsfpmJElsCTlRBGHSa/qm8laW5khmp4biSFyHMutWPo7LfJz/O4AwkRxIGcZA9NZiAFd+1vVBG0w1Y0jzD7w==",
+        "requested": "[7.4.4, )",
+        "resolved": "7.4.4",
+        "contentHash": "fmPxhaX2KF9cjkwU/7GrXaiQ4O0ZtJptfhfoleJHazDbpEwg8K+wdb7D6SIKfkKCG0y2cpSDoeb7x/Hocsop5Q==",
         "dependencies": {
-          "Duende.IdentityServer": "7.3.2"
+          "Duende.IdentityServer": "7.4.4"
         }
       },
       "Duende.IdentityServer.EntityFramework": {
@@ -46,11 +46,11 @@
       },
       "Duende.IdentityServer.Storage": {
         "type": "Direct",
-        "requested": "[7.3.2, )",
-        "resolved": "7.3.2",
-        "contentHash": "a3G+kV9NM/DN3v2g0OCpy0h77e/vSr2rcLDcPnLCQjGUHTcMQtC+GNuAX0Tr9I/mdNrjdO37lYF+zDKUB9NiOA==",
+        "requested": "[7.4.4, )",
+        "resolved": "7.4.4",
+        "contentHash": "BH+I8UiHu2klpmtD+NVoMS55DES/CSU0VtFsAEyAy9Qi6SkLUmSqs28dwRh1k9zlgTUyBcZ1zXsnrfdRphco8w==",
         "dependencies": {
-          "Duende.IdentityModel": "7.1.0"
+          "Duende.IdentityModel": "8.0.0"
         }
       },
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
@@ -101,8 +101,8 @@
       },
       "Duende.IdentityModel": {
         "type": "Transitive",
-        "resolved": "7.1.0",
-        "contentHash": "Ihn2LiHZfiGD0Qu6aKngK5xtqOocZcS88khVG0Xv7uObfzilevAvXHDhAqpvWiZNIXPeCD6SA5Wy/rfP0U4brA=="
+        "resolved": "8.0.0",
+        "contentHash": "8i+Tv4c38LgwoTRKbD0+MqtnNNDSVA83G6JkjGHgC4/7jH0nxZBP0RBhH8xTsvNQ5Pv9zrg+TR8rmtWK9HDOPg=="
       },
       "Humanizer.Core": {
         "type": "Transitive",
