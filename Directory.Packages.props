@@ -6,7 +6,7 @@
     <MicrosoftExtensionsVersion>10.0.0</MicrosoftExtensionsVersion>
     <AspireVersion>13.0.1</AspireVersion>
     <AspireUnstablePackagesVersion>13.0.0-preview.1.25560.3</AspireUnstablePackagesVersion>
-    <GrpcVersion>2.71.0</GrpcVersion>
+    <GrpcVersion>2.76.0</GrpcVersion>
     <DuendeVersion>7.3.1</DuendeVersion>
     <ApiVersioningVersion>8.1.0</ApiVersioningVersion>
   </PropertyGroup>
@@ -22,6 +22,7 @@
     <PackageVersion Include="Aspire.RabbitMQ.Client" Version="$(AspireVersion)" />
     <PackageVersion Include="Aspire.StackExchange.Redis" Version="$(AspireVersion)" />
     <PackageVersion Include="Aspire.Azure.AI.OpenAI" Version="$(AspireUnstablePackagesVersion)" />
+    <PackageVersion Include="Grpc.Net.Client" Version="2.76.0" />
     <PackageVersion Include="Microsoft.Extensions.ApiDescription.Server" Version="10.0.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -80,7 +81,7 @@
     <!-- Grpc -->
     <PackageVersion Include="Grpc.AspNetCore" Version="$(GrpcVersion)" />
     <PackageVersion Include="Grpc.Net.ClientFactory" Version="$(GrpcVersion)" />
-    <PackageVersion Include="Grpc.Tools" Version="2.72.0" PrivateAssets="All" />
+    <PackageVersion Include="Grpc.Tools" Version="2.76.0" PrivateAssets="All" />
     <!-- Miscellaneous -->
     <PackageVersion Include="Dapper" Version="2.1.35" />
     <PackageVersion Include="FluentValidation" Version="12.0.0" />
