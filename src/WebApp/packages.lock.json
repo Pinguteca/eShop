@@ -77,12 +77,12 @@
       },
       "Microsoft.Extensions.ServiceDiscovery.Yarp": {
         "type": "Direct",
-        "requested": "[10.0.0, )",
-        "resolved": "10.0.0",
-        "contentHash": "N5H6PRXyYdf/ltt7S636fxWgPumXw1p3rDaTsGHmEwBa0JAEhOWoO5meXTzUub7FPs3rvyz5X6dzHKbfX3nr/Q==",
+        "requested": "[10.2.0, )",
+        "resolved": "10.2.0",
+        "contentHash": "1R553WDRfqvbn3yKk5JND5D2M41S7ZBMuVGYSTApegej9Dh9iVAxLv1te+7DjuXLKtWk4t0mRN/FNws3KIh3Hg==",
         "dependencies": {
-          "Microsoft.Extensions.ServiceDiscovery": "10.0.0",
-          "Microsoft.Extensions.ServiceDiscovery.Abstractions": "10.0.0",
+          "Microsoft.Extensions.ServiceDiscovery": "10.2.0",
+          "Microsoft.Extensions.ServiceDiscovery.Abstractions": "10.2.0",
           "Yarp.ReverseProxy": "2.3.0"
         }
       },
@@ -247,8 +247,8 @@
       },
       "Microsoft.Extensions.ServiceDiscovery.Abstractions": {
         "type": "Transitive",
-        "resolved": "10.0.0",
-        "contentHash": "qlF8wZH4EpEoaU+EBU5PsTrBLtUwWdDKPUi4VDs7zHsnNB6h9MBqfyqD8aS7WVfEvaZzp6cl7rXOplnNc1TNwQ=="
+        "resolved": "10.2.0",
+        "contentHash": "sANlOvfqfw/yfych4CLlHSKSWzIie6mQG7w83gVur1foNOafyHxcgpoQMvBf+KiB4Tpls6P1/Z77IIQSK8hxFg=="
       },
       "Microsoft.Extensions.Telemetry": {
         "type": "Transitive",
@@ -447,7 +447,7 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "[10.0.0, )",
           "Microsoft.AspNetCore.OpenApi": "[10.0.0, )",
           "Microsoft.Extensions.Http.Resilience": "[10.0.0, )",
-          "Microsoft.Extensions.ServiceDiscovery": "[10.0.0, )",
+          "Microsoft.Extensions.ServiceDiscovery": "[10.2.0, )",
           "Microsoft.OpenApi": "[2.3.2, )",
           "OpenTelemetry.Exporter.OpenTelemetryProtocol": "[1.12.0, )",
           "OpenTelemetry.Extensions.Hosting": "[1.12.0, )",
@@ -532,11 +532,11 @@
       },
       "Microsoft.Extensions.ServiceDiscovery": {
         "type": "CentralTransitive",
-        "requested": "[10.0.0, )",
-        "resolved": "10.0.0",
-        "contentHash": "SAWCC/N/94cJnLt/cAYJgB/C9SdN82ln9Dc2O/+5ZXlnP7Z6KQK11h4/YCVX1M3VUrv6dZUAbhbcuNgMQSMEzQ==",
+        "requested": "[10.2.0, )",
+        "resolved": "10.2.0",
+        "contentHash": "AHTPfiKodj66xA8RwRkFD4q11V2AvzcuDsujv6ViPkOPtvBEYcPVplHakK56pPzWlX08MDS+TAQXfFXAeP7J5w==",
         "dependencies": {
-          "Microsoft.Extensions.ServiceDiscovery.Abstractions": "10.0.0"
+          "Microsoft.Extensions.ServiceDiscovery.Abstractions": "10.2.0"
         }
       },
       "Microsoft.OpenApi": {
