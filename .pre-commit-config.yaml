@@ -62,3 +62,13 @@ repos:
         pass_filenames: true
         types: [png]
         stages: ["pre-push"]
+  - repo: local
+    hooks:
+      - id: svgo
+        name: SVGO optimization
+        description: Optimize SVG files using SVGO.
+        language: node
+        entry: svgo
+        args: ["--multipass", "--quiet"]
+        types: [svg]
+        stages: ["pre-push"]
