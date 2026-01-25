@@ -69,6 +69,6 @@ repos:
         description: Optimize SVG files using SVGO.
         language: node
         entry: svgo
-        args: ["--multipass", "--quiet"]
+        args: ["--multipass", "--quiet", "--config", "svgo.config.mjs"]
         types: [svg]
         stages: ["pre-push"]
