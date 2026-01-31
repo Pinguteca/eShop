@@ -57,6 +57,7 @@ jobs:
                   persist-credentials: true
                   sparse-checkout: |
                       **.svg
+                      svgo.config.mjs
                   sparse-checkout-cone-mode: false
                   filter: "blob:none"
             - run: ls -la
