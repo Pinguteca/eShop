@@ -1,11 +1,4 @@
-# Will run in the following scenarios:
-# - on Pull Requests NOT on draft containing images (not including forks)and aiming at `main`, `master` or `develop`
-# - on pushing of images to `main`, `master` or `develop`
-# - on demand via workflow_dispatch
-# - at 11 PM every Sunday in anything gets missed with any of the above scenarios
-# For Pull Requests, the images are added to the PR.
-# For other scenarios, a new PR will be opened if any images are compressed.
-name: Compress images
+name: Sanitize and optimize SVGs
 on:
     pull_request:
         types: [reopened, ready_for_review, review_requested]
@@ -61,16 +54,31 @@ jobs:
                   sparse-checkout-cone-mode: false
                   filter: "blob:none"
             - run: ls -la
+            - name: Detect changed SVGs
+              uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
+              id: svg_changes
+              with:
+                  list-files: shell
+                  # Filter only added or modified svg files
+                  filters: |
+                      svg:
+                          - added|modified: '**/*.svg'
+            - run: |
+                  echo "SVG changes detected: ${{ steps.svg_changes.outputs.svg_files }}"
             - uses: chainguard-dev/actions/setup-gitsign@18e5e3427cf9d6bcfbefe60dca48e40292f000c5 # v1.5.13
             - name: Use Node.js
+              if: steps.svg_changes.outputs.svg == 'true'
               uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
               with:
                   node-version: 24.12.0
             - name: Install SVGO
+              if: steps.svg_changes.outputs.svg == 'true'
               run: npm install -g svgo@4
             - name: Sanitize and optimize SVGs with SVGO
+              if: steps.svg_changes.outputs.svg == 'true'
               run: svgo --multipass --quiet --config svgo.config.mjs -f .
             - uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
+              if: steps.svg_changes.outputs.svg == 'true'
               with:
                   commit_message: "chore(svg): sanitize and optimize SVGO"
                   file_pattern: "**.svg"
