@@ -1,1 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="80"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="80"
+     onload="alert('onload fired')">
+  <text x="10" y="30">Onload test</text>
+</svg>
