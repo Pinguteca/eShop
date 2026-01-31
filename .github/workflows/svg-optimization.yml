@@ -76,7 +76,11 @@ jobs:
               run: npm install -g svgo@4
             - name: Sanitize and optimize SVGs with SVGO
               if: steps.svg_changes.outputs.svg == 'true'
-              run: svgo --multipass --quiet --config svgo.config.mjs -f .
+              run: |
+                  for file in ${{ steps.svg_changes.outputs.svg_files }}; do
+                      echo "Optimizing $file"
+                      svgo --multipass --quiet --config svgo.config.mjs --input "$file"
+                  done
             - uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
               if: steps.svg_changes.outputs.svg == 'true'
               with:
