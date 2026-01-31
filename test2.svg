@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="50">
-  <script>alert("SVG script executed")</script>
-  <text x="10" y="30">Script test</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="50"><text x="10" y="30">Script test</text></svg>
