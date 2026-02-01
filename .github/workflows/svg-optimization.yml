@@ -1,4 +1,4 @@
-name: Sanitize and optimize SVGs
+name: Sanitize, strip metadata and optimize SVGs
 on:
     pull_request:
         types: [reopened, ready_for_review, review_requested]
@@ -84,5 +84,8 @@ jobs:
             - uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
               if: steps.svg_changes.outputs.svg == 'true'
               with:
-                  commit_message: "chore(svg): sanitize and optimize SVGO"
+                  commit_message: |
+                      chore(svg): sanitize and optimize SVGO
+
+                      changed files: ${{ steps.svg_changes.outputs.svg_files }}
                   file_pattern: "**.svg"
