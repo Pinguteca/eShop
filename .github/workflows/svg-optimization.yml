@@ -6,11 +6,7 @@ on:
         paths:
             - "**.svg"
             - "svgo.config.mjs"
-    push:
-        branches: [master, main, develop, feature/**]
-        paths:
-            - "**.svg"
-            - "svgo.config.mjs"
+    # TODO: adjust workflow for on-demand runs and scheduling
     workflow_dispatch:
     schedule:
         - cron: "00 23 * * 0"
@@ -54,10 +50,15 @@ jobs:
                       svgo.config.mjs
                   sparse-checkout-cone-mode: false
                   filter: "blob:none"
+            # TODO: skip for on-demand and scheduled runs
             - name: Detect changed SVGs
               uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
               id: svg_changes
               with:
+                  # order for choosing the correct base ref:
+                  # PR base branch (when running on pull_request)
+                  # fallback to current branch name
+                  base: ${{ github.event.pull_request.base.ref || github.ref_name }}
                   list-files: shell
                   # Filter only added or modified svg files
                   filters: |
@@ -82,7 +83,7 @@ jobs:
             - name: Sanitize, strip metadata and optimize SVGs
               if: steps.svg_changes.outputs.svg == 'true'
               env:
-                STEPS_SVG_CHANGES_OUTPUTS_SVG_FILES: ${{ steps.svg_changes.outputs.svg_files }}
+                  STEPS_SVG_CHANGES_OUTPUTS_SVG_FILES: ${{ steps.svg_changes.outputs.svg_files }}
               run: |
                   echo "### :white_check_mark: **SVGO optimization results**" >> $GITHUB_STEP_SUMMARY
                   echo "" >> $GITHUB_STEP_SUMMARY
