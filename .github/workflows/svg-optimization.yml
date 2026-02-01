@@ -63,7 +63,9 @@ jobs:
                   filters: |
                       svg:
                           - added|modified: '**/*.svg'
-            - uses: chainguard-dev/actions/setup-gitsign@18e5e3427cf9d6bcfbefe60dca48e40292f000c5 # v1.5.13
+            - name: Setup Gitsign for commit signing
+              if: steps.svg_changes.outputs.svg == 'true'
+              uses: chainguard-dev/actions/setup-gitsign@18e5e3427cf9d6bcfbefe60dca48e40292f000c5 # v1.5.13
             - name: Use Node.js
               if: steps.svg_changes.outputs.svg == 'true'
               uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
