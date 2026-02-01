@@ -79,7 +79,7 @@ jobs:
             - name: Install SVGO
               if: steps.svg_changes.outputs.svg == 'true'
               run: pnpm install -g svgo@4
-            - name: Sanitize and optimize SVGs with SVGO
+            - name: Sanitize, strip metadata and optimize SVGs
               if: steps.svg_changes.outputs.svg == 'true'
               env:
                 STEPS_SVG_CHANGES_OUTPUTS_SVG_FILES: ${{ steps.svg_changes.outputs.svg_files }}
