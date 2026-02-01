@@ -8,3 +8,6 @@ excludes:
   - policy_name: checkout_persist_credentials_should_be_false
     workflow_file_path: .github/workflows/verify-gha-integrity.yml
     job_name: update-lockfile
+  - policy_name: checkout_persist_credentials_should_be_false
+    workflow_file_path: .github/workflows/svg-optimization.yml
+    job_name: svgOptimization
