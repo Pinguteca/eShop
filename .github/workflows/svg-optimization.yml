@@ -1,0 +1,102 @@
+name: Sanitize, strip metadata and optimize SVGs
+on:
+    pull_request:
+        types: [reopened, ready_for_review, review_requested]
+        branches: [master, main, develop]
+        paths:
+            - "**.svg"
+            - "svgo.config.mjs"
+    # TODO: adjust workflow for on-demand runs and scheduling
+    workflow_dispatch:
+    schedule:
+        - cron: "00 23 * * 0"
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+permissions: {}
+
+jobs:
+    svgOptimization:
+        name: Sanitize and optimize SVGs
+        runs-on: ubuntu-latest
+        timeout-minutes: 20
+
+        permissions:
+            contents: write # to write commits
+            id-token: write # Enable OIDC for Gitsign
+
+        steps:
+            - name: Harden Runner
+              uses: step-security/harden-runner@58077d3c7e43986b6b15fba718e8ea69e387dfcc # v2.15.1
+              with:
+                  egress-policy: audit
+                  disable-telemetry: "true"
+                  disable-sudo: "true" # runs on container so same issue as zizmor
+            - name: Optimize Git config for CI
+              run: |
+                  # Disable compression for faster network transfer.
+                  git config --global core.compression 0 
+                  # Turn off fsync
+                  git config --global core.fsync -all
+            - name: Checkout Branch
+              uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+              with:
+                  ref: ${{ github.event.pull_request.head.sha }}
+                  persist-credentials: true
+                  sparse-checkout: |
+                      **.svg
+                      svgo.config.mjs
+                  sparse-checkout-cone-mode: false
+                  filter: "blob:none"
+            # TODO: skip for on-demand and scheduled runs
+            - name: Detect changed SVGs
+              uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
+              id: svg_changes
+              with:
+                  # order for choosing the correct base ref:
+                  # PR base branch (when running on pull_request)
+                  # fallback to current branch name
+                  base: ${{ github.event.pull_request.base.ref || github.ref_name }}
+                  list-files: shell
+                  # Filter only added or modified svg files
+                  filters: |
+                      svg:
+                          - added|modified: '**/*.svg'
+            - name: Setup Gitsign for commit signing
+              if: steps.svg_changes.outputs.svg == 'true'
+              uses: chainguard-dev/actions/setup-gitsign@e9290faa91aa6b1226df129cb450f2ff49235b92 # v1.6.6
+            - name: Install pnpm
+              if: steps.svg_changes.outputs.svg == 'true'
+              uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
+              with:
+                  version: 10
+                  standalone: false
+            - name: Use Node.js
+              if: steps.svg_changes.outputs.svg == 'true'
+              uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+              with:
+                  node-version: 24.12.0
+            - name: Install SVGO
+              if: steps.svg_changes.outputs.svg == 'true'
+              run: |
+                  # 21 days in minutes to avoid installing potentially compromised versions
+                  pnpm config set -g minimumReleaseAge 30240 
+                  pnpm install -g svgo@4
+            - name: Sanitize, strip metadata and optimize SVGs
+              if: steps.svg_changes.outputs.svg == 'true'
+              env:
+                  STEPS_SVG_CHANGES_OUTPUTS_SVG_FILES: ${{ steps.svg_changes.outputs.svg_files }}
+              run: |
+                  echo "### :white_check_mark: **SVGO optimization results**" >> $GITHUB_STEP_SUMMARY
+                  echo "" >> $GITHUB_STEP_SUMMARY
+                  svgo --no-color --multipass --final-newline --eol lf --config svgo.config.mjs ${STEPS_SVG_CHANGES_OUTPUTS_SVG_FILES} >> $GITHUB_STEP_SUMMARY
+            - uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
+              if: steps.svg_changes.outputs.svg == 'true'
+              with:
+                  commit_message: |
+                      chore(svg): sanitize and optimize SVGO
+
+                      changed files: ${{ steps.svg_changes.outputs.svg_files }}
+                  file_pattern: "**.svg"

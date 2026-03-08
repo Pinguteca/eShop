@@ -1,12 +1,18 @@
 {
   "version": 1,
-  "generated": "2026-01-11T21:02:15.616Z",
+  "generated": "2026-03-08T17:48:41.857Z",
   "actions": {
     "step-security/harden-runner": [
       {
         "version": "20cf305ff2072d973412fa9b1e3a4f227bda3c76",
         "sha": "20cf305ff2072d973412fa9b1e3a4f227bda3c76",
         "integrity": "sha256-54e3ce64c59b87e7a86181a337594f644abee0991c9db3a6887ae738eb7ac970",
+        "dependencies": []
+      },
+      {
+        "version": "58077d3c7e43986b6b15fba718e8ea69e387dfcc",
+        "sha": "58077d3c7e43986b6b15fba718e8ea69e387dfcc",
+        "integrity": "sha256-da808c51e83eebd74092412a99cbd2063eebf5513c825ab351d31f99c1ea604e",
         "dependencies": []
       }
     ],
@@ -16,6 +22,12 @@
         "sha": "8e8c483db84b4bee98b60c0593521ed34d9990e8",
         "integrity": "sha256-d414ece895ebce08c818601c45ca8489806731838f8eed6356031b3d1877a7a1",
         "dependencies": []
+      },
+      {
+        "version": "de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+        "sha": "de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+        "integrity": "sha256-c744527bfafdf73cf1bf8a83a3ace81c46e36d03e6ed952fa9d93683adabab4d",
+        "dependencies": []
       }
     ],
     "chainguard-dev/actions/setup-gitsign": [
@@ -23,6 +35,12 @@
         "version": "3e8a2a226fad9e1ecbf2d359b8a7697554a4ac6d",
         "sha": "3e8a2a226fad9e1ecbf2d359b8a7697554a4ac6d",
         "integrity": "sha256-696e56578f4dd56549ae896605cf415b78f3432bb0cbd42890a48975f84d3503",
+        "dependencies": []
+      },
+      {
+        "version": "e9290faa91aa6b1226df129cb450f2ff49235b92",
+        "sha": "e9290faa91aa6b1226df129cb450f2ff49235b92",
+        "integrity": "sha256-aaf3013723728217923d260ca25d2c41dea97117f2cc58dda79fc89ef747bd80",
         "dependencies": []
       }
     ],
@@ -70,6 +88,12 @@
         "sha": "395ad3262231945c25e8478fd5baf05154b1d79f",
         "integrity": "sha256-1a5a752048e0de0f754f1c3ca6b923503899bf080b3d08f81fca277de87b3794",
         "dependencies": []
+      },
+      {
+        "version": "53b83947a5a98c8d113130e565377fae1a50d02f",
+        "sha": "53b83947a5a98c8d113130e565377fae1a50d02f",
+        "integrity": "sha256-60f207251c66b68c41bd8c75f10578081de47a54ef2ac8df8aa830b5853eda61",
+        "dependencies": []
       }
     ],
     "actions/setup-dotnet": [
@@ -94,11 +118,19 @@
         "dependencies": []
       }
     ],
-    "gjtorikian/gh-actions-lockfile": [
+    "dorny/paths-filter": [
       {
-        "version": "24be31e941fc36df78f82762cd45c28b4cbcaedd",
-        "sha": "24be31e941fc36df78f82762cd45c28b4cbcaedd",
-        "integrity": "sha256-6a3612083812bfbf22ef48e284a93dbf82766dea50126f85d2160ae092018087",
+        "version": "de90cc6fb38fc0963ad72b210f1f284cd68cea36",
+        "sha": "de90cc6fb38fc0963ad72b210f1f284cd68cea36",
+        "integrity": "sha256-07c63522e75cd14669d8202d83e0823a170f8d05a89a488729eb60446f9f7af4",
+        "dependencies": []
+      }
+    ],
+    "pnpm/action-setup": [
+      {
+        "version": "41ff72655975bd51cab0327fa583b6e92b6d3061",
+        "sha": "41ff72655975bd51cab0327fa583b6e92b6d3061",
+        "integrity": "sha256-ff9db052ccf236e3d7520da06ef8fdd687abdb9b4c1b470031a96912fa937a68",
         "dependencies": []
       }
     ],
@@ -107,6 +139,14 @@
         "version": "04702edda442b2e678b25b537cec683a1493fcb9",
         "sha": "04702edda442b2e678b25b537cec683a1493fcb9",
         "integrity": "sha256-fb727ccb3f59ccc9d4fc5e0de90e1238ad8b9ff2f48e4b100e47ed99c229c509",
+        "dependencies": []
+      }
+    ],
+    "gjtorikian/gh-actions-lockfile": [
+      {
+        "version": "24be31e941fc36df78f82762cd45c28b4cbcaedd",
+        "sha": "24be31e941fc36df78f82762cd45c28b4cbcaedd",
+        "integrity": "sha256-6a3612083812bfbf22ef48e284a93dbf82766dea50126f85d2160ae092018087",
         "dependencies": []
       }
     ],

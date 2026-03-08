@@ -8,8 +8,11 @@ spec:
         identities:
           - subjectRegExp: .+@gmail.com$ # Allow commits signed with Gmail accounts, not ideal, for testing purposes only.
             issuer: https://github.com/login/oauth
+          - issuer: https://token.actions.githubusercontent.com
+            # again, not ideal, for testing purposes only.
+            subjectRegExp: https://github.com/Pinguteca/eShop/.github/workflows/.+$
       ctlog:
         url: https://rekor.sigstore.dev
     - key:
-        # Allow commits signed by GitHub.
+        # Allow commits signed by GitHub, e.g. the UI
         kms: https://github.com/web-flow.gpg
