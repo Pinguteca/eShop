@@ -1,12 +1,18 @@
 {
   "version": 1,
-  "generated": "2026-02-01T23:20:49.722Z",
+  "generated": "2026-03-08T17:48:41.857Z",
   "actions": {
     "step-security/harden-runner": [
       {
         "version": "20cf305ff2072d973412fa9b1e3a4f227bda3c76",
         "sha": "20cf305ff2072d973412fa9b1e3a4f227bda3c76",
         "integrity": "sha256-54e3ce64c59b87e7a86181a337594f644abee0991c9db3a6887ae738eb7ac970",
+        "dependencies": []
+      },
+      {
+        "version": "58077d3c7e43986b6b15fba718e8ea69e387dfcc",
+        "sha": "58077d3c7e43986b6b15fba718e8ea69e387dfcc",
+        "integrity": "sha256-da808c51e83eebd74092412a99cbd2063eebf5513c825ab351d31f99c1ea604e",
         "dependencies": []
       }
     ],
@@ -15,6 +21,12 @@
         "version": "8e8c483db84b4bee98b60c0593521ed34d9990e8",
         "sha": "8e8c483db84b4bee98b60c0593521ed34d9990e8",
         "integrity": "sha256-d414ece895ebce08c818601c45ca8489806731838f8eed6356031b3d1877a7a1",
+        "dependencies": []
+      },
+      {
+        "version": "de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+        "sha": "de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+        "integrity": "sha256-c744527bfafdf73cf1bf8a83a3ace81c46e36d03e6ed952fa9d93683adabab4d",
         "dependencies": []
       }
     ],
@@ -26,9 +38,9 @@
         "dependencies": []
       },
       {
-        "version": "18e5e3427cf9d6bcfbefe60dca48e40292f000c5",
-        "sha": "18e5e3427cf9d6bcfbefe60dca48e40292f000c5",
-        "integrity": "sha256-61939c587c8882b626cc98e46cfb424dfdc4f26cd9b9dd51721016cab919fba9",
+        "version": "e9290faa91aa6b1226df129cb450f2ff49235b92",
+        "sha": "e9290faa91aa6b1226df129cb450f2ff49235b92",
+        "integrity": "sha256-aaf3013723728217923d260ca25d2c41dea97117f2cc58dda79fc89ef747bd80",
         "dependencies": []
       }
     ],
@@ -75,6 +87,12 @@
         "version": "395ad3262231945c25e8478fd5baf05154b1d79f",
         "sha": "395ad3262231945c25e8478fd5baf05154b1d79f",
         "integrity": "sha256-1a5a752048e0de0f754f1c3ca6b923503899bf080b3d08f81fca277de87b3794",
+        "dependencies": []
+      },
+      {
+        "version": "53b83947a5a98c8d113130e565377fae1a50d02f",
+        "sha": "53b83947a5a98c8d113130e565377fae1a50d02f",
+        "integrity": "sha256-60f207251c66b68c41bd8c75f10578081de47a54ef2ac8df8aa830b5853eda61",
         "dependencies": []
       }
     ],
