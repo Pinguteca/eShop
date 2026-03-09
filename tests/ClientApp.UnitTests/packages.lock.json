@@ -96,8 +96,8 @@
       },
       "CommunityToolkit.Mvvm": {
         "type": "Transitive",
-        "resolved": "8.3.2",
-        "contentHash": "m8EolE1A0Updj68WTsZSGI6VWb6mUqHPh7QFo0kt7+JPhYMNXRS1ch8TS/oITAdcxTLrwMOp3ku1KjeG1/Zdpg=="
+        "resolved": "8.4.0",
+        "contentHash": "tqVU8yc/ADO9oiTRyTnwhFN68hCwvkliMierptWOudIAvWY1mWCh5VFh+guwHJmpMwfg0J0rY+yyd5Oy7ty9Uw=="
       },
       "Google.Protobuf": {
         "type": "Transitive",
@@ -355,7 +355,7 @@
         "type": "Project",
         "dependencies": {
           "CommunityToolkit.Maui": "[9.1.1, )",
-          "CommunityToolkit.Mvvm": "[8.3.2, )",
+          "CommunityToolkit.Mvvm": "[8.4.0, )",
           "Google.Protobuf": "[3.29.3, )",
           "Grpc.Net.Client": "[2.67.0, )",
           "IdentityModel": "[7.0.0, )",
