@@ -30,12 +30,12 @@
       },
       "CommunityToolkit.Aspire.OllamaSharp": {
         "type": "Direct",
-        "requested": "[9.8.0-beta.395, )",
-        "resolved": "9.8.0-beta.395",
-        "contentHash": "jjdZz9u9OK9yhbxZqFTzQvp8RKr4Wd7eP9n3iQbe0eH8E1QkMkBFJSpkEIocOR/kdEuUW7P2u1swh5axHWSXqg==",
+        "requested": "[13.1.1, )",
+        "resolved": "13.1.1",
+        "contentHash": "SZGmv7mBsuEdbjYBfoACE+6m5WOSYkBI0c8mg8m8dDzzooK2OjqeNULaw9ZbpjYC1ObpmU/AX5psYSAMfBhooQ==",
         "dependencies": {
-          "Microsoft.Extensions.AI": "9.5.0",
-          "OllamaSharp": "5.1.12",
+          "Microsoft.Extensions.AI": "10.0.0",
+          "OllamaSharp": "5.4.12",
           "OpenTelemetry.Extensions.Hosting": "1.12.0"
         }
       },
@@ -62,9 +62,9 @@
       },
       "Microsoft.AspNetCore.App.Internal.Assets": {
         "type": "Direct",
-        "requested": "[10.0.1, )",
-        "resolved": "10.0.1",
-        "contentHash": "rafnWkNfJPA0nCZ5u9bFLiIhCv+aGDWBPJMejuROFMHEpsNhTdv8Cvhv+2jIH+b5485FhndbiwOQJUBMeBa6BQ=="
+        "requested": "[10.0.3, )",
+        "resolved": "10.0.3",
+        "contentHash": "mr3Zn+ht8lijYvlMIasftw9opU9hsLKDdnOgQMmYI3RjWPJLOF9l8+YHDseRkTs97wOrULmJgo/NDCmzL/EGDg=="
       },
       "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
         "type": "Direct",
@@ -170,8 +170,8 @@
       },
       "Microsoft.Bcl.AsyncInterfaces": {
         "type": "Transitive",
-        "resolved": "9.0.0",
-        "contentHash": "owmu2Cr3IQ8yQiBleBHlGk8dSQ12oaF2e7TpzwJKEl4m84kkZJjEY1n33L67Y3zM5jPOjmmbdHjbfiL0RqcMRQ=="
+        "resolved": "8.0.0",
+        "contentHash": "3WA9q9yVqJp222P3x1wYIGDAkpjAku0TMUaaQV22g6L67AI0LdOIrVS7Ht2vJfLHGSPVuqN94vIr15qn+HEkHw=="
       },
       "Microsoft.Extensions.AI": {
         "type": "Transitive",
@@ -333,11 +333,10 @@
       },
       "OllamaSharp": {
         "type": "Transitive",
-        "resolved": "5.1.12",
-        "contentHash": "r5uhsPYH1jfot36dr3lqpY3visSNNgsPa8p4crh/DMoWeiY0LBrJlTVoVCZXbjU6J6kzSoW8wzMumPEYqgn4gw==",
+        "resolved": "5.4.12",
+        "contentHash": "uUKOgoTV9Fxo9J5syrY4OMZ/2/xlPO83tGG+FjGmY8HqJVJ1iUT5f8EsC9yNEqBBIoth9D8zzN4I5p1oQEMBhQ==",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "9.0.0",
-          "Microsoft.Extensions.AI.Abstractions": "9.4.0-preview.1.25207.5"
+          "Microsoft.Extensions.AI.Abstractions": "10.0.0"
         }
       },
       "OpenAI": {
