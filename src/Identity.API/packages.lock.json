@@ -46,11 +46,11 @@
       },
       "Duende.IdentityServer.Storage": {
         "type": "Direct",
-        "requested": "[7.3.2, )",
-        "resolved": "7.3.2",
-        "contentHash": "a3G+kV9NM/DN3v2g0OCpy0h77e/vSr2rcLDcPnLCQjGUHTcMQtC+GNuAX0Tr9I/mdNrjdO37lYF+zDKUB9NiOA==",
+        "requested": "[7.4.7, )",
+        "resolved": "7.4.7",
+        "contentHash": "pP+OKt4f8u532m+nORqwe1y3PFcQAw731EnKLnMt4eBtL1YZTuivs2Oox77Eukl8pnU1JK6zibjH9TJkoeS+bQ==",
         "dependencies": {
-          "Duende.IdentityModel": "7.1.0"
+          "Duende.IdentityModel": "8.0.1"
         }
       },
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
@@ -101,8 +101,8 @@
       },
       "Duende.IdentityModel": {
         "type": "Transitive",
-        "resolved": "7.1.0",
-        "contentHash": "Ihn2LiHZfiGD0Qu6aKngK5xtqOocZcS88khVG0Xv7uObfzilevAvXHDhAqpvWiZNIXPeCD6SA5Wy/rfP0U4brA=="
+        "resolved": "8.0.1",
+        "contentHash": "P3bNPAiyYh15VuDZP/xE7Y8ohhQloiW2KdiBzzJh3m26sPQJ3Wuxj4ur6X+A9m0qhdwx2kLeh4so0a2nEslHmw=="
       },
       "Humanizer.Core": {
         "type": "Transitive",
