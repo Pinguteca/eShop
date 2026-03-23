@@ -62,9 +62,9 @@
       },
       "Microsoft.AspNetCore.App.Internal.Assets": {
         "type": "Direct",
-        "requested": "[10.0.1, )",
-        "resolved": "10.0.1",
-        "contentHash": "rafnWkNfJPA0nCZ5u9bFLiIhCv+aGDWBPJMejuROFMHEpsNhTdv8Cvhv+2jIH+b5485FhndbiwOQJUBMeBa6BQ=="
+        "requested": "[10.0.3, )",
+        "resolved": "10.0.3",
+        "contentHash": "mr3Zn+ht8lijYvlMIasftw9opU9hsLKDdnOgQMmYI3RjWPJLOF9l8+YHDseRkTs97wOrULmJgo/NDCmzL/EGDg=="
       },
       "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
         "type": "Direct",
@@ -77,12 +77,12 @@
       },
       "Microsoft.Extensions.ServiceDiscovery.Yarp": {
         "type": "Direct",
-        "requested": "[10.0.0, )",
-        "resolved": "10.0.0",
-        "contentHash": "N5H6PRXyYdf/ltt7S636fxWgPumXw1p3rDaTsGHmEwBa0JAEhOWoO5meXTzUub7FPs3rvyz5X6dzHKbfX3nr/Q==",
+        "requested": "[10.4.0, )",
+        "resolved": "10.4.0",
+        "contentHash": "22dvLPEH3j6efZiNkZ/3wp6I5v32Ua7BN5wYndM2g5oIA0GhVyzysSxUYCmizw/65KfDZZLuHNrJAhCpoAwwtg==",
         "dependencies": {
-          "Microsoft.Extensions.ServiceDiscovery": "10.0.0",
-          "Microsoft.Extensions.ServiceDiscovery.Abstractions": "10.0.0",
+          "Microsoft.Extensions.ServiceDiscovery": "10.4.0",
+          "Microsoft.Extensions.ServiceDiscovery.Abstractions": "10.4.0",
           "Yarp.ReverseProxy": "2.3.0"
         }
       },
@@ -247,8 +247,8 @@
       },
       "Microsoft.Extensions.ServiceDiscovery.Abstractions": {
         "type": "Transitive",
-        "resolved": "10.0.0",
-        "contentHash": "qlF8wZH4EpEoaU+EBU5PsTrBLtUwWdDKPUi4VDs7zHsnNB6h9MBqfyqD8aS7WVfEvaZzp6cl7rXOplnNc1TNwQ=="
+        "resolved": "10.4.0",
+        "contentHash": "HkBb7cdi27tkQiQw1anQFbXe+A3pjRwDKgVbd/DD9fMAO2X9abK0FEyM/tNVXjW3lwOWl2tF+Xij/DqI6i+JTg=="
       },
       "Microsoft.Extensions.Telemetry": {
         "type": "Transitive",
@@ -447,7 +447,7 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "[10.0.0, )",
           "Microsoft.AspNetCore.OpenApi": "[10.0.0, )",
           "Microsoft.Extensions.Http.Resilience": "[10.0.0, )",
-          "Microsoft.Extensions.ServiceDiscovery": "[10.0.0, )",
+          "Microsoft.Extensions.ServiceDiscovery": "[10.4.0, )",
           "Microsoft.OpenApi": "[2.3.2, )",
           "OpenTelemetry.Exporter.OpenTelemetryProtocol": "[1.12.0, )",
           "OpenTelemetry.Extensions.Hosting": "[1.12.0, )",
@@ -532,11 +532,11 @@
       },
       "Microsoft.Extensions.ServiceDiscovery": {
         "type": "CentralTransitive",
-        "requested": "[10.0.0, )",
-        "resolved": "10.0.0",
-        "contentHash": "SAWCC/N/94cJnLt/cAYJgB/C9SdN82ln9Dc2O/+5ZXlnP7Z6KQK11h4/YCVX1M3VUrv6dZUAbhbcuNgMQSMEzQ==",
+        "requested": "[10.4.0, )",
+        "resolved": "10.4.0",
+        "contentHash": "RznZAH6L4RNvroECT5JpqfFQJjHTn+8N7+ThSgYutbshkuymFeL/uBIZt1CM8LOdpPPhn4//a5fLUah9/k7ayQ==",
         "dependencies": {
-          "Microsoft.Extensions.ServiceDiscovery.Abstractions": "10.0.0"
+          "Microsoft.Extensions.ServiceDiscovery.Abstractions": "10.4.0"
         }
       },
       "Microsoft.OpenApi": {
