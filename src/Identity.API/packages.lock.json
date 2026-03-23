@@ -55,20 +55,20 @@
       },
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
         "type": "Direct",
-        "requested": "[10.0.0, )",
-        "resolved": "10.0.0",
-        "contentHash": "mH1+58nbX5RWSd8hajSnXSdpQ1MN3oca488Zd+DvKX2nPTAyTVNRzubMV06BmPcjOZ9waLr/AjwcNiCQ8bCscQ==",
+        "requested": "[10.0.5, )",
+        "resolved": "10.0.5",
+        "contentHash": "oo1uauTwgcnhYgituZ2nI3wJ8XN9z76ggu2zkOJu1BCfOOsqr+g08Kr4MOiMuXEhwySkpIV+MVoC25hC1288NA==",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "10.0.0"
+          "Microsoft.EntityFrameworkCore.Relational": "10.0.5"
         }
       },
       "Microsoft.AspNetCore.Identity.UI": {
         "type": "Direct",
-        "requested": "[10.0.0, )",
-        "resolved": "10.0.0",
-        "contentHash": "DvqmVNTJq2PWSUi5NfV8zAd9sFrfSuq0cifaj6YHaunQMeWMoCjhC2ChFRuIUs5ZiIFOEg2gmSeke2OES7RAwA==",
+        "requested": "[10.0.5, )",
+        "resolved": "10.0.5",
+        "contentHash": "qzYhpJ4Uxng18hmuKqwqydZaPzItrv9WOwNULJ2ka952TZKlOQkERTSkVO8G/19WiRtoznZatrcRyOvppYRGFA==",
         "dependencies": {
-          "Microsoft.Extensions.FileProviders.Embedded": "10.0.0"
+          "Microsoft.Extensions.FileProviders.Embedded": "10.0.5"
         }
       },
       "Microsoft.EntityFrameworkCore.Tools": {
@@ -224,22 +224,22 @@
       },
       "Microsoft.EntityFrameworkCore": {
         "type": "Transitive",
-        "resolved": "10.0.0",
-        "contentHash": "hHa2amRjMyBLUH/KTML6FgIAhZ0VFYkhCKwWEax0rO6iNeM1P5MflyeQLE5dniSIOZHc3Oqyv5UIyTFO4e1Auw==",
+        "resolved": "10.0.5",
+        "contentHash": "9tNBmK3EpYVGRQLiqP+bqK2m+TD0Gv//4vCzR7ZOgl4FWzCFyOpYdIVka13M4kcBdPdSJcs3wbHr3rmzOqbIMA==",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "10.0.0",
-          "Microsoft.EntityFrameworkCore.Analyzers": "10.0.0"
+          "Microsoft.EntityFrameworkCore.Abstractions": "10.0.5",
+          "Microsoft.EntityFrameworkCore.Analyzers": "10.0.5"
         }
       },
       "Microsoft.EntityFrameworkCore.Abstractions": {
         "type": "Transitive",
-        "resolved": "10.0.0",
-        "contentHash": "C+TT9k7f1GQ8agOfV512K9iwrzi76RXVSDiLx+iWC9pz3QhEpSF1Dyk+FpVvd8ULQ+rqymfM8KQ7g48ttQVyMg=="
+        "resolved": "10.0.5",
+        "contentHash": "32c58Rnm47Qvhimawf67KO9PytgPz3QoWye7Abapt0Yocw/JnzMiSNj/pRoIKyn8Jxypkv86zxKD4Q/zNTc0Ag=="
       },
       "Microsoft.EntityFrameworkCore.Analyzers": {
         "type": "Transitive",
-        "resolved": "10.0.0",
-        "contentHash": "TxHQq0kn0tpYs2ljeRl8jtmWk720B0nteqI6mAZM77HWJpYT9Zj8SkkBBlj8K3Yeq18a6NBjz6YutE+shEk4Ag=="
+        "resolved": "10.0.5",
+        "contentHash": "ipC4u1VojgEfoIZhtbS2Sx5IluJTP/Jf1hz3yGsxGBgSukYY/CquI6rAjxn5H58CZgVn36qcuPPtNMwZ0AUzMg=="
       },
       "Microsoft.EntityFrameworkCore.Design": {
         "type": "Transitive",
@@ -261,10 +261,10 @@
       },
       "Microsoft.EntityFrameworkCore.Relational": {
         "type": "Transitive",
-        "resolved": "10.0.0",
-        "contentHash": "A3MX1ee7RDxWCUdx/KqP+74fbksz0UIhkVZh56YHvbPkEKsffCXgHU3LGkRDwqR/MrBNWLCWC/IVX79tzM30ZA==",
+        "resolved": "10.0.5",
+        "contentHash": "uxmFjZEAB/KbsgWFSS4lLqkEHCfXxB2x0UcbiO4e5fCRpFFeTMSx/me6009nYJLu5IKlDwO1POh++P6RilFTDw==",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "10.0.0"
+          "Microsoft.EntityFrameworkCore": "10.0.5"
         }
       },
       "Microsoft.Extensions.AmbientMetadata.Application": {
@@ -302,8 +302,8 @@
       },
       "Microsoft.Extensions.FileProviders.Embedded": {
         "type": "Transitive",
-        "resolved": "10.0.0",
-        "contentHash": "ECaTMB4NdV9W1es9J6tN0yoXRPUHKMi5+2L7hcVZ5k9zVdxccIx6+vMllwEYcdTaO0mCETEmdH4F0KxCqgnPaw=="
+        "resolved": "10.0.5",
+        "contentHash": "DQzkbLFNfwmjxErAnWyZTTyBd4cMo6vmGteM4Ayedhk5Pccm2VuKoeKcOZjJG1T+dYK6lMCNk2L7Ftl7dLhgqg=="
       },
       "Microsoft.Extensions.Http.Diagnostics": {
         "type": "Transitive",
@@ -590,8 +590,8 @@
         "type": "Project",
         "dependencies": {
           "Asp.Versioning.Mvc.ApiExplorer": "[8.1.0, )",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "[10.0.0, )",
-          "Microsoft.AspNetCore.OpenApi": "[10.0.0, )",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "[10.0.5, )",
+          "Microsoft.AspNetCore.OpenApi": "[10.0.5, )",
           "Microsoft.Extensions.Http.Resilience": "[10.0.0, )",
           "Microsoft.Extensions.ServiceDiscovery": "[10.0.0, )",
           "Microsoft.OpenApi": "[2.3.2, )",
@@ -634,27 +634,27 @@
       },
       "Microsoft.AspNetCore.Authentication.JwtBearer": {
         "type": "CentralTransitive",
-        "requested": "[10.0.0, )",
-        "resolved": "10.0.0",
-        "contentHash": "0BgDfT1GoZnzjJOBwx5vFMK5JtqsTEas9pCEwd1/KKxNUAqFmreN60WeUoF+CsmSd9tOQuqWedvdBo/QqHuNTQ==",
+        "requested": "[10.0.5, )",
+        "resolved": "10.0.5",
+        "contentHash": "fZzXogChrwQ/SfifQJgeW7AtR8hUv5+LH9oLWjm5OqfnVt3N8MwcMHHMdawvqqdjP79lIZgetnSpj77BLsSI1g==",
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.0.1"
         }
       },
       "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
         "type": "CentralTransitive",
-        "requested": "[10.0.0, )",
-        "resolved": "10.0.0",
-        "contentHash": "6ATONu+5A2oh/vzmoFhf3cuQcclMaWGHrb1kvjVsYtml+gzuWD48MmbsItM4xAUQkJZ2t8XFmbGp8pZLPxKneA==",
+        "requested": "[10.0.5, )",
+        "resolved": "10.0.5",
+        "contentHash": "MPODD1XR3wu+QbVBpId+uO7yGfhSr1ZIdiPrqzbApHlVUdi2Va29elIKYaROaZd5ksvYWtPnurvHPzTrzg1UnQ==",
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.0.1"
         }
       },
       "Microsoft.AspNetCore.OpenApi": {
         "type": "CentralTransitive",
-        "requested": "[10.0.0, )",
-        "resolved": "10.0.0",
-        "contentHash": "0aqIF1t+sA2T62LIeMtXGSiaV7keGQaJnvwwmu+htQdjCaKYARfXAeqp4nHH9y2etpilyZ/tnQzZg4Ilmo/c4Q==",
+        "requested": "[10.0.5, )",
+        "resolved": "10.0.5",
+        "contentHash": "vTcxIfOPyfFbYk1g8YcXJfkMnlEWVkSnnjxcZLy60zgwiHMRf2SnZR+9E4HlpwKxgE3yfKMOti8J6WfKuKsw6w==",
         "dependencies": {
           "Microsoft.OpenApi": "2.0.0"
         }
