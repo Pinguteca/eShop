@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-08T17:48:41.857Z",
+  "generated": "2026-07-20T23:15:30.325Z",
   "actions": {
     "step-security/harden-runner": [
       {
@@ -17,12 +17,6 @@
       }
     ],
     "actions/checkout": [
-      {
-        "version": "8e8c483db84b4bee98b60c0593521ed34d9990e8",
-        "sha": "8e8c483db84b4bee98b60c0593521ed34d9990e8",
-        "integrity": "sha256-d414ece895ebce08c818601c45ca8489806731838f8eed6356031b3d1877a7a1",
-        "dependencies": []
-      },
       {
         "version": "de0fac2e4500dabe0009e67214ff5f5447ce83dd",
         "sha": "de0fac2e4500dabe0009e67214ff5f5447ce83dd",
